@@ -22,12 +22,72 @@
 .indicator{width:10px;height:10px;border-radius:50%;background:#ffffff40;cursor:pointer;transition:.2s;border:0;padding:0}
 .indicator.active{background:var(--accent);transform:scale(1.2)}
 
-.tabs{display:flex;gap:10px;margin-bottom:25px}.tab{cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--muted);padding:12px 23px;border-radius:999px;font-weight:bold;font-size:13px;transition:.2s}.tab:hover,.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}.section-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.section-top h2{margin:0;font-size:22px}.section-top span{color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;padding-bottom:65px}.item{cursor:pointer}
+.tabs{display:flex;gap:10px;margin-bottom:25px}
+.tab{cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--muted);padding:12px 23px;border-radius:999px;font-weight:bold;font-size:13px;transition:.2s}
+.tab:hover,.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.section-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.section-top h2{margin:0;font-size:22px}
+.section-top span{color:var(--muted);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;padding-bottom:65px}
+.item{cursor:pointer}
 
-/* Ajuste fino na poster para carregar background inline 100% compatível */
-.poster{height:245px;border-radius:16px;border:1px solid var(--line);overflow:hidden;position:relative;background-size:cover;background-position:center;transition:.2s}
+/* CSS Simplificado da Poster - Carregamento 100% Compatível e Ultra-Estável */
+.poster{height:245px;border-radius:16px;border:1px solid var(--line);overflow:hidden;position:relative;background-size:cover;background-position:center;background-color:#151519;transition:.2s}
+.poster:hover{transform:translateY(-5px);border-color:#707078}
+.poster:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 35%,#000d)}
+.poster-name{position:absolute;z-index:1;left:16px;bottom:15px;right:10px;font-size:18px;font-weight:800;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
-.poster:hover{transform:translateY(-5px);border-color:#707078}.poster:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 35%,#000d)}.poster-name{position:absolute;z-index:1;left:16px;bottom:15px;right:10px;font-size:18px;font-weight:800;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.tag{position:absolute;z-index:2;top:12px;left:12px;border:1px solid #ffffff40;background:#0008;color:var(--accent);padding:5px 8px;border-radius:999px;font-size:9px;font-weight:bold}.meta{display:flex;justify-content:space-between;padding:11px 3px;color:var(--muted);font-size:12px}.meta b{color:#ddd}.empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:18px;color:var(--muted);padding:40px;text-align:center}.pager{display:flex;justify-content:center;gap:8px;padding:0 0 55px}.page{cursor:pointer;min-width:38px;height:36px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--muted);font-weight:bold;transition:.2s}.page.active,.page:hover{background:var(--accent);border-color:var(--accent);color:#fff}.modal{display:none;position:fixed;z-index:10;inset:0;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.shade{position:absolute;inset:0;background:#000d;backdrop-filter:blur(8px)}.dialog{position:relative;z-index:1;width:min(900px,100%);background:var(--card);border:1px solid #44444c;border-radius:20px;overflow:hidden;max-height:92vh;display:flex;flex-direction:column}.close{position:absolute;z-index:2;right:12px;top:12px;width:34px;height:34px;border:1px solid #ffffff44;border-radius:50%;background:#000b;color:#fff;font-size:22px;cursor:pointer}.player{aspect-ratio:16/9;background:#000;flex-shrink:0}.player iframe{width:100%;height:100%;border:0}.dialog-info{padding:25px;background:var(--card);border-top:1px solid var(--line);color:var(--white);overflow-y:auto;flex-grow:1}footer{border-top:1px solid var(--line);padding:22px 6%;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}footer a{color:#ccc;text-decoration:none}footer a:hover{text-decoration:underline}@media(max-width:760px){header{padding:0 4%;gap:12px}.search{width:min(240px,58vw)}.search input{font-size:12px}.intro{display:block;padding-top:40px}.intro p{margin-top:20px}.grid{grid-template-columns:repeat(2,1fr);gap:12px}.poster{height:220px}.banner{height:250px;border-radius:16px}.slide-content{left:20px;right:20px}.slide-content h2{font-size:22px;margin:5px 0 8px}.slide-content p{font-size:12px;margin-bottom:12px;-webkit-line-clamp:2}.slide-btn{padding:8px 16px;font-size:11px}.carousel-indicators{bottom:15px;right:20px}.tab{flex:1;padding:12px 8px;font-size:12px}.wrap{width:92%}.modal{padding:0}.dialog{width:100%;height:100%;border:0;border-radius:0;max-height:100vh}.player{height:40vh;min-height:220px;aspect-ratio:auto;flex:none}.dialog-info{padding:16px 20px;overflow-y:auto}.close{top:10px;right:10px}}@media(max-width:430px){header{padding:0 4%}.grid{grid-template-columns:1fr 1fr}.poster{height:190px}.poster-name{font-size:15px}.intro h1{letter-spacing:-2px}footer{display:block;line-height:2}}
+.tag{position:absolute;z-index:2;top:12px;left:12px;border:1px solid #ffffff40;background:#0008;color:var(--accent);padding:5px 8px;border-radius:999px;font-size:9px;font-weight:bold}
+.meta{display:flex;justify-content:space-between;padding:11px 3px;color:var(--muted);font-size:12px}
+.meta b{color:#ddd}
+.empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:18px;color:var(--muted);padding:40px;text-align:center}
+.pager{display:flex;justify-content:center;gap:8px;padding:0 0 55px}
+.page{cursor:pointer;min-width:38px;height:36px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--muted);font-weight:bold;transition:.2s}
+.page.active,.page:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+.modal{display:none;position:fixed;z-index:10;inset:0;align-items:center;justify-content:center;padding:18px}
+.modal.open{display:flex}
+.shade{position:absolute;inset:0;background:#000d;backdrop-filter:blur(8px)}
+.dialog{position:relative;z-index:1;width:min(900px,100%);background:var(--card);border:1px solid #44444c;border-radius:20px;overflow:hidden;max-height:92vh;display:flex;flex-direction:column}
+.close{position:absolute;z-index:2;right:12px;top:12px;width:34px;height:34px;border:1px solid #ffffff44;border-radius:50%;background:#000b;color:#fff;font-size:22px;cursor:pointer}
+.player{aspect-ratio:16/9;background:#000;flex-shrink:0}
+.player iframe{width:100%;height:100%;border:0}
+.dialog-info{padding:25px;background:var(--card);border-top:1px solid var(--line);color:var(--white);overflow-y:auto;flex-grow:1}
+
+footer{border-top:1px solid var(--line);padding:22px 6%;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}
+footer a{color:#ccc;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:760px){
+  header{padding:0 4%;gap:12px}
+  .search{width:min(240px,58vw)}
+  .search input{font-size:12px}
+  .intro{display:block;padding-top:40px}
+  .intro p{margin-top:20px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .poster{height:220px}
+  .banner{height:250px;border-radius:16px}
+  .slide-content{left:20px;right:20px}
+  .slide-content h2{font-size:22px;margin:5px 0 8px}
+  .slide-content p{font-size:12px;margin-bottom:12px;-webkit-line-clamp:2}
+  .slide-btn{padding:8px 16px;font-size:11px}
+  .carousel-indicators{bottom:15px;right:20px}
+  .tab{flex:1;padding:12px 8px;font-size:12px}
+  .wrap{width:92%}
+  .modal{padding:0}
+  .dialog{width:100%;height:100%;border:0;border-radius:0;max-height:100vh}
+  .player{height:40vh;min-height:220px;aspect-ratio:auto;flex:none}
+  .dialog-info{padding:16px 20px;overflow-y:auto}
+  .close{top:10px;right:10px}
+}
+@media(max-width:430px){
+  header{padding:0 4%}
+  .grid{grid-template-columns:1fr 1fr}
+  .poster{height:190px}
+  .poster-name{font-size:15px}
+  .intro h1{letter-spacing:-2px}
+  footer{display:block;line-height:2}
+}
 </style>
 </head>
 <body>
@@ -89,7 +149,12 @@
     
     <!-- Painel de Informações Enriquecidas Netflix-style -->
     <div class="dialog-info">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+      <div style="display: flex; gap: 25px; flex-wrap: wrap; align-items: flex-start;">
+        
+        <!-- Cartaz/Poster Real no Modal -->
+        <img id="modal-poster" src="" alt="Cartaz do Conteúdo" style="width: 140px; height: 210px; border-radius: 12px; object-fit: cover; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0,0,0,0.5); flex-shrink: 0;">
+        
+        <!-- Conteúdo Principal -->
         <div style="flex: 1; min-width: 280px;">
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
             <span class="tag-meta" id="modal-type" style="background: var(--accent); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; text-transform: uppercase;"></span>
@@ -99,11 +164,11 @@
           </div>
           <h2 id="title" style="margin: 0 0 10px 0; font-size: 26px; font-weight: 800; letter-spacing: -1px; line-height: 1.2;"></h2>
           <p id="modal-original-title" style="margin: -5px 0 15px 0; font-size: 12px; color: var(--muted); font-style: italic;"></p>
-          <p id="modal-sin" style="color: #c2c2c6; font-size: 13.5px; line-height: 1.6; margin: 0 0 20px 0; max-height: 140px; overflow-y: auto; padding-right: 5px;"></p>
+          <p id="modal-sin" style="color: #c2c2c6; font-size: 13.5px; line-height: 1.6; margin: 0; max-height: 140px; overflow-y: auto; padding-right: 5px;"></p>
         </div>
         
         <!-- Ficha Técnica Rápida -->
-        <div style="width: min(300px, 100%); background: #1c1c24; padding: 15px; border-radius: 12px; border: 1px solid var(--line); font-size: 12.5px;">
+        <div style="width: min(280px, 100%); background: #1c1c24; padding: 15px; border-radius: 12px; border: 1px solid var(--line); font-size: 12.5px; flex-shrink: 0;">
           <div style="margin-bottom: 12px;">
             <span style="color: var(--muted); display: block; margin-bottom: 3px; font-weight: bold;">Gêneros:</span>
             <span id="modal-genres" style="color: var(--white); font-weight: bold;"></span>
@@ -304,8 +369,8 @@ function render(type=activeType, query='', page=activePage){
   
   catalog.innerHTML=visible.length?visible.map(x=>`
     <article class="item" data-id="${x.id}" data-type="${x.t}" data-name="${x.n}">
-      <!-- Ajustado para carregar a imagem em background-image direto inline de forma robusta -->
-      <div class="poster" style="--a:${x.a};--b:${x.b}; background-image: linear-gradient(#0002,#0002), url('${x.img}'), linear-gradient(135deg, var(--a), var(--b));">
+      <!-- Carregamento de imagem simples em background-image direto inline de alta compatibilidade mundial -->
+      <div class="poster" style="background-image: url('${x.img}');">
         <span class="tag">${x.t==='anime'?'ANIME':x.t.toUpperCase()}</span>
         <span class="poster-name">${x.n}</span>
       </div>
@@ -369,6 +434,7 @@ function openPlayer(id, name, type){
   
   // Elements
   const modalTitle = document.querySelector('#title');
+  const modalPoster = document.querySelector('#modal-poster');
   const modalType = document.querySelector('#modal-type');
   const modalYear = document.querySelector('#modal-year');
   const modalDur = document.querySelector('#modal-dur');
@@ -383,6 +449,7 @@ function openPlayer(id, name, type){
   if (isIMDb) {
     // IMDb Manual Code Paste
     modalTitle.textContent = name;
+    modalPoster.src = 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=500&auto=format&fit=crop';
     modalType.textContent = isSeries ? 'Série (IMDb)' : 'Filme (IMDb)';
     modalYear.textContent = '—';
     modalDur.style.display = 'none';
@@ -397,6 +464,7 @@ function openPlayer(id, name, type){
     const item = items.find(x => x.id === id);
     if (item) {
       modalTitle.textContent = item.n;
+      modalPoster.src = item.img;
       modalType.textContent = item.t === 'filme' ? 'Filme' : item.t === 'serie' ? 'Série' : 'Anime';
       modalYear.textContent = item.y;
       
@@ -428,6 +496,7 @@ function openPlayer(id, name, type){
     } else {
       // Fallback genérico se não achado por algum motivo
       modalTitle.textContent = name;
+      modalPoster.src = 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=500&auto=format&fit=crop';
       modalType.textContent = type === 'filme' ? 'Filme' : type === 'serie' ? 'Série' : 'Anime';
       modalYear.textContent = '';
       modalDur.style.display = 'none';
@@ -477,6 +546,6 @@ document.onkeydown=e=>{
 
 render();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a26b58d88ffaafcb',t:'MTc4NTk5MTA1NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f"}' crossorigin="anonymous"></script>
-</body>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f"}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a26b5f2149081d09',t:'MTc4NTk5MTMxMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
