@@ -91,6 +91,26 @@ footer a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
+
+<!-- Tela de Bloqueio Translúcida Moderna com Fundo Transparente Desfocado -->
+<div id="block-screen" style="position: fixed; inset: 0; z-index: 9999; background: rgba(11, 11, 13, 0.75); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); color: #f7f7f5; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px; font-family: Arial, sans-serif; transition: opacity 0.5s ease, visibility 0.5s ease;">
+  <div style="max-width: 500px; background: rgba(21, 21, 25, 0.9); border: 1px solid rgba(239, 68, 68, 0.3); padding: 40px; border-radius: 24px; box-shadow: 0 15px 50px rgba(0,0,0,0.5), 0 0 30px rgba(239, 68, 68, 0.05); position: relative; backdrop-filter: blur(10px);">
+    
+    <!-- Escudo do Bloqueio (Elemento Clicável para Desbloqueio Secreto) -->
+    <div id="block-shield" style="width: 80px; height: 80px; margin: 0 auto 25px; cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: center; background: rgba(239, 68, 68, 0.1); border-radius: 50%; border: 2px solid #ef4444; color: #ef4444; font-size: 38px; transition: 0.2s;">
+      ⚠️
+    </div>
+    
+    <h2 style="color: #ef4444; font-size: 24px; font-weight: 800; letter-spacing: 1px; margin: 0 0 15px 0; text-transform: uppercase;">Acesso Suspenso</h2>
+    <p style="font-size: 15px; color: #f7f7f5; line-height: 1.6; font-weight: bold; margin: 0;">
+      O bloqueio foi feito devido a possíveis problemas judiciais.
+    </p>
+    <p style="font-size: 12.5px; color: #9999a2; line-height: 1.6; margin: 15px 0 0 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 15px;">
+      Este domínio encontra-se temporariamente suspenso por determinação legal em conformidade com as diretrizes e normas de proteção de propriedade intelectual.
+    </p>
+  </div>
+</div>
+
 <header>
   <div class="logo"><b>X</b> XITERS PLUS</div>
   <label class="search" for="search">
@@ -194,6 +214,43 @@ footer a:hover{text-decoration:underline}
 <script src="items.js"></script>
 
 <script>
+// Sistema de Bloqueio com Bypass Secreto e Fundo Transparente Desfocado
+(function() {
+  const blockScreen = document.querySelector('#block-screen');
+  const blockShield = document.querySelector('#block-shield');
+  
+  if (localStorage.getItem('xiters_unlocked') === 'true') {
+    blockScreen.style.opacity = '0';
+    blockScreen.style.visibility = 'hidden';
+    setTimeout(() => blockScreen.remove(), 500);
+    return;
+  }
+  
+  // Bloquear scroll do body enquanto estiver bloqueado
+  document.body.style.overflow = 'hidden';
+  
+  let clickCount = 0;
+  blockShield.addEventListener('click', () => {
+    clickCount++;
+    blockShield.style.transform = 'scale(0.9) rotate(5deg)';
+    setTimeout(() => blockShield.style.transform = 'scale(1) rotate(0deg)', 150);
+    
+    if (clickCount >= 3) {
+      clickCount = 0;
+      const code = prompt('Insira a chave de liberação do catálogo:');
+      if (code === 'xitersplus') {
+        localStorage.setItem('xiters_unlocked', 'true');
+        blockScreen.style.opacity = '0';
+        blockScreen.style.visibility = 'hidden';
+        document.body.style.overflow = ''; // Restaurar scroll do body
+        setTimeout(() => blockScreen.remove(), 500);
+      } else if (code !== null) {
+        alert('Chave de liberação incorreta ou expirada.');
+      }
+    }
+  });
+})();
+
 const catalog=document.querySelector('#catalog'),heading=document.querySelector('#heading'),count=document.querySelector('#count');
 
 const banners={
@@ -546,6 +603,5 @@ document.onkeydown=e=>{
 
 render();
 </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f"}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a26b5f2149081d09',t:'MTc4NTk5MTMxMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
