@@ -77,8 +77,8 @@ body::after {
 
 /* Scrollbar Customizada Ultra Fina e Elegante */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #020204;
@@ -92,18 +92,18 @@ body::after {
   background: var(--accent);
 }
 
-/* Header Glassmorphism Flutuante Superior */
+/* Header Glassmorphism Flutuante Superior (Altura Sleek Reduzida) */
 header {
-  height: 80px;
+  height: 70px;
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
-  padding: 0 6%;
+  gap: 20px;
+  padding: 0 5%;
   position: sticky;
   top: 0;
-  background: rgba(3, 3, 5, 0.65);
+  background: rgba(3, 3, 5, 0.7);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   z-index: 100;
@@ -113,10 +113,10 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-weight: 950;
-  font-size: 22px;
-  letter-spacing: 2px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
   background: linear-gradient(135deg, #fff 40%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -126,12 +126,12 @@ header {
 .logo b {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
   background: var(--accent-gradient);
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 950;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
@@ -149,9 +149,9 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
-  width: min(520px, 46vw);
-  height: 44px;
-  padding: 0 18px;
+  width: min(500px, 46vw);
+  height: 40px;
+  padding: 0 16px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.02);
@@ -164,11 +164,11 @@ header {
   border-color: rgba(30, 64, 175, 0.8);
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 25px rgba(30, 64, 175, 0.25);
-  transform: scale(1.015);
+  transform: scale(1.01);
 }
 
 .search span {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--muted);
   transform: rotate(-15deg);
 }
@@ -178,7 +178,7 @@ header {
   border: 0;
   background: transparent;
   color: #fff;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
 }
 
@@ -187,32 +187,32 @@ header {
 }
 
 .wrap {
-  width: min(1200px, 90%);
+  width: min(1200px, 92%);
   margin: auto;
 }
 
-/* Intro Título Grande e Impactante */
+/* Intro Título Grande e Impactante (Mais compacto para evitar espaços vazios) */
 .intro {
-  padding: 60px 0 35px;
+  padding: 30px 0 15px;
   display: flex;
   align-items: end;
   justify-content: space-between;
-  gap: 35px;
+  gap: 30px;
 }
 
 .intro small {
   color: var(--accent);
-  font-size: 11px;
+  font-size: 10.5px;
   letter-spacing: 4px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .intro h1 {
-  font-size: clamp(40px, 6vw, 68px);
+  font-size: clamp(28px, 5vw, 52px);
   line-height: 0.95;
-  letter-spacing: -3.5px;
-  margin: 15px 0 0;
+  letter-spacing: -2.5px;
+  margin: 10px 0 0;
   max-width: 650px;
   font-weight: 950;
   text-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -226,23 +226,23 @@ header {
 
 .intro p {
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.5;
   max-width: 360px;
   margin: 0;
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 500;
 }
 
-/* Widescreen Hero Banner Slideshow (Cinema-Teatral - 480px) */
+/* Widescreen Hero Banner Slideshow (Cinema-Teatral Proporcional 21:9 Compacto) */
 .banner {
-  height: 480px;
+  height: clamp(220px, 28vw, 380px); /* Totalmente fluido e mais compacto! */
   border: 1px solid var(--line);
-  border-radius: 28px;
+  border-radius: 24px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   background: #000;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
 }
 
 .slide {
@@ -251,7 +251,7 @@ header {
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   background-size: cover;
-  background-position: center 20%;
+  background-position: center;
   display: flex;
   align-items: center;
 }
@@ -265,31 +265,31 @@ header {
 /* Efeito Ken Burns de Zoom Cinemático Lento */
 @keyframes kenBurnsAnimation {
   0% { transform: scale(1); }
-  100% { transform: scale(1.06); }
+  100% { transform: scale(1.05); }
 }
 
 .slide:after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(3,3,5,0.98) 0%, rgba(3,3,5,0.65) 45%, rgba(3,3,5,0.1) 85%, transparent 100%), 
+  background: linear-gradient(90deg, rgba(3,3,5,0.98) 0%, rgba(3,3,5,0.6) 45%, rgba(3,3,5,0.1) 85%, transparent 100%), 
               linear-gradient(0deg, rgba(3,3,5,1) 0%, rgba(3,3,5,0.4) 40%, transparent 80%);
 }
 
 .slide-content {
   position: absolute;
   z-index: 2;
-  left: 60px;
-  right: 60px;
-  max-width: 680px;
+  left: 50px;
+  right: 50px;
+  max-width: 600px;
 }
 
 .slide-content small {
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -298,11 +298,11 @@ header {
 }
 
 .slide-content h2 {
-  font-size: clamp(30px, 4.5vw, 48px);
+  font-size: clamp(24px, 3.8vw, 40px);
   line-height: 1.05;
-  margin: 18px 0 14px;
+  margin: 14px 0 10px;
   font-weight: 950;
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
   text-shadow: 0 4px 15px rgba(0,0,0,0.8);
   background: linear-gradient(180deg, #fff 0%, #e5e7eb 100%);
   -webkit-background-clip: text;
@@ -311,12 +311,12 @@ header {
 
 .slide-content p {
   color: #d1d5db;
-  margin: 0 0 28px 0;
-  font-size: 15px;
-  line-height: 1.6;
+  margin: 0 0 20px 0;
+  font-size: 13.5px;
+  line-height: 1.5;
   text-shadow: 0 2px 8px rgba(0,0,0,0.7);
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -325,35 +325,35 @@ header {
   background: var(--accent-gradient);
   color: #fff;
   border: 0;
-  padding: 14px 32px;
+  padding: 11px 26px;
   border-radius: 99px;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   box-shadow: 0 8px 25px var(--accent-glow);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slide-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(30, 64, 175, 0.6);
 }
 
 .carousel-indicators {
   position: absolute;
   z-index: 2;
-  bottom: 30px;
-  right: 60px;
+  bottom: 25px;
+  right: 50px;
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 .indicator {
-  width: 25px;
-  height: 5px;
+  width: 20px;
+  height: 4px;
   border-radius: 99px;
   background: rgba(255, 255, 255, 0.15);
   cursor: pointer;
@@ -364,15 +364,15 @@ header {
 
 .indicator.active {
   background: var(--accent-gradient);
-  width: 45px;
+  width: 38px;
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* Abas estilo Prime Video e HBO Max */
+/* Abas estilo Prime Video e HBO Max (Mais compacto) */
 .tabs {
   display: flex;
-  gap: 12px;
-  margin-bottom: 35px;
+  gap: 10px;
+  margin-bottom: 25px;
   flex-wrap: wrap;
 }
 
@@ -381,10 +381,10 @@ header {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.015);
   color: var(--muted);
-  padding: 13px 28px;
+  padding: 11px 24px;
   border-radius: 99px;
   font-weight: 800;
-  font-size: 13.5px;
+  font-size: 13px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -405,7 +405,7 @@ header {
 
 /* Prateleiras de Rolagem Horizontal (Row Containers - Netflix Style) */
 .row-container {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   position: relative;
 }
 
@@ -413,29 +413,29 @@ header {
 .row-container::after {
   content: '';
   position: absolute;
-  top: 40px;
+  top: 30px;
   right: 0;
   bottom: 0;
-  width: 100px;
+  width: 80px;
   background: linear-gradient(90deg, transparent, var(--bg));
   pointer-events: none;
   z-index: 2;
 }
 
 .row-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 950;
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
   border-left: 4px solid var(--accent);
-  padding-left: 14px;
+  padding-left: 12px;
   letter-spacing: -0.5px;
 }
 
 .row-scroller {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   overflow-x: auto;
-  padding: 10px 4px 25px 4px;
+  padding: 8px 2px 20px 2px;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
 }
@@ -445,17 +445,17 @@ header {
 }
 
 .row-scroller .item {
-  flex: 0 0 210px; /* Largura fixa para cada card na fileira horizontal */
+  flex: 0 0 180px; /* Largura reduzida para ficar muito mais compacto e uniforme com o grid! */
 }
 
 .row-scroller .poster {
-  height: 290px; /* Cards de cinema mais altos */
+  height: auto; /* Deixa o aspect-ratio controlar de forma limpa */
 }
 
 /* Layout Dashboard da Categoria com Sidebar de Filtro Lateral/Bento Style com Transparência */
 .category-dashboard {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   margin-top: 10px;
   flex-wrap: wrap;
 }
@@ -464,8 +464,8 @@ header {
   width: 260px;
   background: var(--card); /* Transparência de alta sofisticação */
   border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 25px;
+  border-radius: 20px;
+  padding: 20px;
   backdrop-filter: blur(24px) saturate(140%);
   -webkit-backdrop-filter: blur(24px) saturate(140%);
   flex-shrink: 0;
@@ -473,37 +473,43 @@ header {
 }
 
 .sidebar-filter h3 {
-  margin: 0 0 22px 0;
-  font-size: 16px;
+  margin: 0 0 18px 0;
+  font-size: 15px;
   font-weight: 900;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   letter-spacing: 1px;
 }
 
+.filter-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .filter-group {
-  margin-bottom: 22px;
+  margin-bottom: 0;
 }
 
 .filter-label {
   display: block;
-  font-size: 11px;
+  font-size: 10.5px;
   color: var(--muted);
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 
 .filter-select {
   width: 100%;
-  height: 42px;
+  height: 40px;
   background: #090a12;
   border: 1px solid var(--line);
   border-radius: 10px;
   color: #fff;
-  padding: 0 14px;
-  font-size: 13.5px;
+  padding: 0 12px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: border-color 0.3s ease;
@@ -515,12 +521,12 @@ header {
 
 .filter-btn-reset {
   width: 100%;
-  height: 42px;
+  height: 40px;
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--line);
   border-radius: 10px;
   color: #fff;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -531,7 +537,7 @@ header {
   border-color: var(--white);
 }
 
-/* Grid de Posters Geral (Modo Exploração com Paginação e Modo Pesquisa) */
+/* Grid de Posters Geral (Compacto e Uniformizado de 4 colunas para não ficar gigante) */
 .grid-section {
   display: none; /* Oculto por padrão, ativado em buscas ou ao clicar em abas dedicadas */
 }
@@ -540,29 +546,39 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   border-left: 4px solid var(--accent);
-  padding-left: 14px;
+  padding-left: 12px;
 }
 
 .section-top h2 {
   margin: 0;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 950;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .section-top span {
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
 }
 
+/* Grid perfeitamente simétrica de 4 colunas ao lado da sidebar */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas ao lado da sidebar dão proporção de ouro */
-  gap: 24px;
-  padding-bottom: 80px;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 16px; /* Mais compacto para evitar espaços vazios */
+  padding-bottom: 50px;
+}
+
+/* Grid expandida para largura total na busca sem sidebar de filtros (5 colunas) */
+.category-dashboard.search-active .sidebar-filter {
+  display: none;
+}
+
+.category-dashboard.search-active .grid {
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas para preencher com sofisticação */
 }
 
 .item {
@@ -571,10 +587,11 @@ header {
   flex-direction: column;
 }
 
-/* Poster com Efeito de Hover Zoom Premium, Shine Sweep e Glowing Borders (Max + Netflix Style) */
+/* Poster com Efeito de Hover Zoom Premium, Shine Sweep e Proporção Perfeita de Cinema 2:3 */
 .poster {
-  height: 265px;
-  border-radius: 18px;
+  width: 100%;
+  aspect-ratio: 2/3; /* Proporção padrão cinematográfica UNIFORME em todos os locais! */
+  border-radius: 16px;
   border: 1px solid var(--line);
   overflow: hidden;
   position: relative;
@@ -603,34 +620,26 @@ header {
 }
 
 .item:hover .poster {
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-8px) scale(1.02);
   border-color: rgba(30, 64, 175, 0.6);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px var(--accent-glow);
-}
-
-.poster:after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(transparent 30%, rgba(3, 3, 5, 0.98));
-  transition: opacity 0.3s ease;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 0 20px var(--accent-glow);
 }
 
 /* Efeito de Overlay de Play ao passar o mouse (Netflix Style) */
 .poster-hover-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(3, 3, 5, 0.7);
+  background: rgba(3, 3, 5, 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   opacity: 0;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 3;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 20px;
+  padding: 16px;
   transform: translateY(10px);
 }
 
@@ -640,8 +649,8 @@ header {
 }
 
 .play-btn-circle {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--accent-gradient);
   display: flex;
@@ -651,41 +660,44 @@ header {
   box-shadow: 0 0 20px var(--accent-glow);
   transform: scale(0.75);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .item:hover .play-btn-circle {
   transform: scale(1);
 }
 
-.poster-name {
-  position: absolute;
-  z-index: 2;
-  left: 18px;
-  bottom: 18px;
-  right: 18px;
-  font-size: 18px;
-  font-weight: 900;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+/* Título e Meta do Cartão Fora do Poster para Posicionamento Impecável */
+.item-title {
+  margin: 10px 0 4px 0;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
   overflow: hidden;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-  line-height: 1.2;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.item:hover .item-title {
+  color: #60a5fa; /* Realce ao passar o mouse */
 }
 
 /* Tag Glassmorphic */
 .tag {
   position: absolute;
   z-index: 2;
-  top: 14px;
-  left: 14px;
+  top: 10px;
+  left: 10px;
   border: 1px solid rgba(255,255,255,0.15);
   background: rgba(14, 15, 25, 0.7);
   backdrop-filter: blur(10px);
   color: #fff;
-  padding: 5px 11px;
-  border-radius: 8px;
-  font-size: 9px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 8.5px;
   font-weight: 900;
   letter-spacing: 1.5px;
 }
@@ -693,9 +705,9 @@ header {
 .meta {
   display: flex;
   justify-content: space-between;
-  padding: 14px 6px 6px;
+  padding: 2px 1px 4px;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -717,19 +729,20 @@ header {
 .pager {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  padding: 0 0 75px;
+  gap: 8px;
+  padding: 10px 0 40px;
 }
 
 .page {
   cursor: pointer;
-  min-width: 42px;
-  height: 40px;
+  min-width: 38px;
+  height: 36px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.015);
   color: var(--muted);
   font-weight: 900;
+  font-size: 13px;
   transition: all 0.2s ease;
 }
 
@@ -785,7 +798,7 @@ header {
 
 .close {
   position: absolute;
-  z-index: 10;
+  z-index: 210;
   right: 20px;
   top: 20px;
   width: 38px;
@@ -815,6 +828,7 @@ header {
   flex-shrink: 0;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid var(--line);
+  z-index: 1;
 }
 
 .player iframe {
@@ -824,19 +838,32 @@ header {
 }
 
 .dialog-info {
-  padding: 35px;
+  padding: 25px; /* Reduzido de 35px para ser mais compacto */
   background: transparent; /* Deixa transparecer o blur de vidro de fundo do modal! */
   color: var(--white);
   overflow-y: auto;
   flex-grow: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Bento Grid Interno do Modal para Densidade Máxima de Informação */
 .bento-container {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+
+#modal-title {
+  margin: 0 0 10px 0;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  background: linear-gradient(180deg, #fff 0%, #d1d5db 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Badges e Fichas Técnicas estilo Prime e Netflix */
@@ -863,7 +890,7 @@ header {
 
 footer {
   border-top: 1px solid var(--line);
-  padding: 26px 6%;
+  padding: 22px 6%;
   color: var(--muted);
   font-size: 12px;
   display: flex;
@@ -882,42 +909,85 @@ footer a:hover {
   color: var(--accent);
 }
 
-/* Responsividade de Estilo Superior */
+/* Responsividade de Estilo Superior (Compactação Extrema de Espaços e Tamanhos) */
+@media(max-width:1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+    gap: 16px;
+  }
+  .category-dashboard.search-active .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media(max-width:760px){
-  header { padding: 0 4%; gap: 12px; height: 72px; }
+  header { padding: 0 4%; gap: 12px; height: 64px; }
   .search { width: min(240px, 58vw); }
   .search input { font-size: 12px; }
-  .intro { display: block; padding-top: 40px; }
-  .intro p { margin-top: 20px; }
+  .intro { display: block; padding-top: 25px; }
+  .intro p { margin-top: 8px; }
+  
   .category-dashboard { display: block; }
-  .sidebar-filter { width: 100%; margin-bottom: 25px; }
-  .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .poster { height: 220px; border-radius: 14px; }
-  .banner { height: 260px; border-radius: 20px; }
-  .slide-content { left: 28px; right: 24px; }
-  .slide-content h2 { font-size: 26px; margin: 8px 0 10px; }
-  .slide-content p { font-size: 13px; margin-bottom: 16px; -webkit-line-clamp: 2; }
-  .slide-btn { padding: 10px 20px; font-size: 12px; }
-  .carousel-indicators { bottom: 15px; right: 28px; }
-  .tab { flex: 1; padding: 12px 6px; font-size: 11.5px; text-align: center; }
-  .wrap { width: 92%; }
+  .sidebar-filter { width: 100%; margin-bottom: 20px; padding: 15px; border-radius: 16px; }
+  .sidebar-filter h3 { margin-bottom: 12px; font-size: 14px; border-bottom: 0; padding-bottom: 0; }
+  
+  .filter-group-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .filter-group {
+    flex: 1;
+    min-width: 120px;
+    margin-bottom: 0 !important;
+  }
+  .filter-btn-wrapper {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .grid { grid-template-columns: repeat(3, 1fr); gap: 12px; } /* 3 colunas para celulares normais */
+  .category-dashboard.search-active .grid { grid-template-columns: repeat(3, 1fr); }
+  
+  .banner { height: 220px; border-radius: 20px; margin-bottom: 25px; }
+  .slide-content { left: 24px; right: 24px; }
+  .slide-content h2 { font-size: 22px; margin: 8px 0 8px; }
+  .slide-content p { font-size: 12px; margin-bottom: 14px; -webkit-line-clamp: 2; }
+  .slide-btn { padding: 8px 18px; font-size: 11.5px; }
+  .carousel-indicators { bottom: 12px; right: 24px; }
+  
+  .tab { flex: 1; padding: 10px 4px; font-size: 11px; text-align: center; }
+  .wrap { width: 94%; }
+  
   .modal { padding: 0; }
   .dialog { width: 100%; height: 100%; border: 0; border-radius: 0; max-height: 100vh; }
-  .player { height: 38vh; min-height: 200px; aspect-ratio: auto; flex: none; }
-  .dialog-info { padding: 22px; overflow-y: auto; }
-  .close { top: 15px; right: 15px; width: 36px; height: 36px; }
-  .row-scroller .item { flex: 0 0 150px; }
-  .row-scroller .poster { height: 210px; }
+  .player { height: 38vh; min-height: 180px; aspect-ratio: auto; flex: none; }
+  .dialog-info { padding: 18px; overflow-y: auto; }
+  .close { top: 12px; right: 12px; width: 34px; height: 34px; font-size: 22px; }
+  
+  .row-scroller .item { flex: 0 0 130px; } /* Muito mais compacto no celular */
   .row-container::after { display: none; } /* Ocultar sombra no mobile para melhor renderização */
 }
 
-@media(max-width:430px){
-  header { padding: 0 4%; }
-  .grid { grid-template-columns: 1fr 1fr; }
-  .poster { height: 190px; }
-  .poster-name { font-size: 15px; }
-  .intro h1 { letter-spacing: -2px; }
-  footer { display: block; line-height: 2.2; }
+@media(max-width:480px){
+  .logo { font-size: 15px; gap: 6px; }
+  .logo b { width: 26px; height: 28px; font-size: 15px; border-radius: 6px; }
+  .search { height: 36px; padding: 0 10px; gap: 8px; }
+  .search span { font-size: 16px; }
+  .search input { font-size: 12px; }
+  
+  .banner { height: 180px; border-radius: 16px; }
+  .slide-content { left: 14px; right: 14px; }
+  .slide-content h2 { font-size: 18px; margin: 4px 0 6px; }
+  .slide-content p { font-size: 10.5px; margin-bottom: 8px; -webkit-line-clamp: 2; }
+  .slide-btn { padding: 6px 14px; font-size: 10px; }
+  .carousel-indicators { bottom: 8px; right: 14px; }
+  
+  .grid { grid-template-columns: 1fr 1fr; gap: 10px; } /* 2 colunas para celulares muito pequenos (menor que 480px) */
+  .category-dashboard.search-active .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .intro h1 { letter-spacing: -1.5px; }
+  footer { display: block; line-height: 2.0; padding: 16px 6%; }
 }
 </style>
 </head>
@@ -939,12 +1009,7 @@ footer a:hover {
     <p>Pesquise instantaneamente em nossa base enriquecida com elenco, sinopse e gêneros, ou digite qualquer identificador do IMDb para reproduzir.</p>
   </section>
   
-  <!-- Banner Carousel Hero Section Dinâmico -->
-  <section class="banner" id="banner">
-    <div id="carousel-slides"></div>
-    <div class="carousel-indicators" id="carousel-indicators"></div>
-  </section>
-  
+  <!-- Abas de Navegação (Agora posicionadas acima do banner de forma natural!) -->
   <div class="tabs" role="tablist">
     <button class="tab active" data-tab="home" role="tab" aria-selected="true">💡 Início</button>
     <button class="tab" data-tab="filme" role="tab" aria-selected="false">🎬 Filmes</button>
@@ -952,18 +1017,24 @@ footer a:hover {
     <button class="tab" data-tab="anime" role="tab" aria-selected="false">Animes</button>
   </div>
   
-  <!-- Prateleiras Horizontais Estilo Netflix (Modo Principal de Destaques) -->
+  <!-- Banner Carousel Hero Section Dinâmico (Proporcional e Compacto) -->
+  <section class="banner" id="banner">
+    <div id="carousel-slides"></div>
+    <div class="carousel-indicators" id="carousel-indicators"></div>
+  </section>
+
+  <!-- Prateleiras Horizontais Estilo Netflix (Modo Principal de Destaques Curados por Popularidade!) -->
   <div id="home-rows">
     <div class="row-container">
-      <h2 class="row-title">🎬 Filmes de Sucesso</h2>
+      <h2 class="row-title">🔥 Tendências Globais (Mais Assistidos)</h2>
       <div class="row-scroller" id="row-movies"></div>
     </div>
     <div class="row-container">
-      <h2 class="row-title">📺 Séries Recomendadas</h2>
+      <h2 class="row-title">✨ Estreias Recentes e Novidades</h2>
       <div class="row-scroller" id="row-series"></div>
     </div>
     <div class="row-container">
-      <h2 class="row-title">🌸 Animes Populares</h2>
+      <h2 class="row-title">🌸 Animes de Sucesso Internacional</h2>
       <div class="row-scroller" id="row-animes"></div>
     </div>
   </div>
@@ -976,26 +1047,41 @@ footer a:hover {
       <aside class="sidebar-filter">
         <h3>📊 Filtros Rápidos</h3>
         
-        <div class="filter-group">
-          <label class="filter-label" for="filter-rating">Nota Recomendada</label>
-          <select id="filter-rating" class="filter-select">
-            <option value="all">⭐ Todas as Notas</option>
-            <option value="8">⭐ Excelentes (8.0+)</option>
-            <option value="7">⭐ Muito Bons (7.0+)</option>
-          </select>
+        <div class="filter-group-container">
+          <!-- Ordenação Dinâmica (Satisfaz "quasifique e melhore sem ser por pontuação") -->
+          <div class="filter-group">
+            <label class="filter-label" for="filter-sort">Ordenar por</label>
+            <select id="filter-sort" class="filter-select">
+              <option value="votes">🔥 Popularidade (Votos)</option>
+              <option value="rating">⭐ Melhor Avaliados (Nota)</option>
+              <option value="year">📅 Lançamentos Recentes</option>
+              <option value="name">🔤 Ordem Alfabética (A-Z)</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label" for="filter-rating">Nota Recomendada</label>
+            <select id="filter-rating" class="filter-select">
+              <option value="all">⭐ Todas as Notas</option>
+              <option value="8">⭐ Excelentes (8.0+)</option>
+              <option value="7">⭐ Muito Bons (7.0+)</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label class="filter-label" for="filter-year">Época / Lançamento</label>
+            <select id="filter-year" class="filter-select">
+              <option value="all">📅 Todos os Anos</option>
+              <option value="2020">📅 Anos 2020+</option>
+              <option value="2010">📅 Anos 2010+</option>
+              <option value="classic">📅 Clássicos (&lt;2010)</option>
+            </select>
+          </div>
+          
+          <div class="filter-group filter-btn-wrapper">
+            <button id="btn-reset-filters" class="filter-btn-reset">Limpar Filtros</button>
+          </div>
         </div>
-        
-        <div class="filter-group">
-          <label class="filter-label" for="filter-year">Época / Lançamento</label>
-          <select id="filter-year" class="filter-select">
-            <option value="all">📅 Todos os Anos</option>
-            <option value="2020">📅 Anos 2020+</option>
-            <option value="2010">📅 Anos 2010+</option>
-            <option value="classic">📅 Clássicos (&lt;2010)</option>
-          </select>
-        </div>
-        
-        <button id="btn-reset-filters" class="filter-btn-reset">Limpar Filtros</button>
       </aside>
       
       <!-- Grid e Paginação Area -->
@@ -1020,13 +1106,16 @@ footer a:hover {
   </div>
 </footer>
 
-<!-- Modal Player Reproduzindo Conteúdo Pirata Original em Iframe + Informações Avançadas -->
+<!-- Modal Player Reproduzindo Conteúdo via Iframe + Informações Avançadas -->
 <div class="modal" id="modal" aria-hidden="true">
   <div class="shade" data-close></div>
   <div class="dialog">
+    <!-- Neblina Cósmica do Modal (HBO Max / Max style) baseada na imagem ativa -->
+    <div id="modal-bg-banner" style="position: absolute; inset: 0; background-size: cover; background-position: center 20%; opacity: 0.12; filter: blur(40px); pointer-events: none; z-index: 0;"></div>
+    
     <button class="close" data-close aria-label="Fechar modal">×</button>
     
-    <!-- Player de Vídeo Pirata Original Integrado via Iframe -->
+    <!-- Player de Vídeo Integrado via Iframe -->
     <div class="player">
       <iframe id="iframe" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Player de Vídeo"></iframe>
     </div>
@@ -1036,10 +1125,10 @@ footer a:hover {
       <div class="bento-container">
         
         <!-- Cartaz/Poster Real no Modal -->
-        <img id="modal-poster" src="" alt="Cartaz do Conteúdo" style="width: 130px; height: 195px; border-radius: 12px; object-fit: cover; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.6); flex-shrink: 0;">
+        <img id="modal-poster" src="" alt="Cartaz do Conteúdo" style="width: 130px; height: 195px; border-radius: 12px; object-fit: cover; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.6); flex-shrink: 0; position: relative; z-index: 1;">
         
         <!-- Conteúdo Principal -->
-        <div style="flex: 1; min-width: 280px;">
+        <div style="flex: 1; min-width: 280px; position: relative; z-index: 1;">
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
             <span class="tag-meta" id="modal-type"></span>
             <span id="modal-year" style="color: var(--white); font-size: 14.5px; font-weight: 800;"></span>
@@ -1050,13 +1139,13 @@ footer a:hover {
             <span class="badge-pill">5.1</span>
           </div>
           <!-- ID Corrigido e Alinhado com o JavaScript -->
-          <h2 id="modal-title" style="margin: 0 0 10px 0; font-size: 32px; font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; background: linear-gradient(180deg, #fff 0%, #d1d5db 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></h2>
+          <h2 id="modal-title"></h2>
           <p id="modal-original-title" style="margin: -5px 0 18px 0; font-size: 13px; color: var(--muted); font-style: italic; font-weight: 600;"></p>
           <p id="modal-sin" style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin: 0; max-height: 140px; overflow-y: auto; padding-right: 5px;"></p>
         </div>
         
         <!-- Ficha Técnica Rápida (HBO Max / Prime-style) -->
-        <div style="width: min(280px, 100%); background: #121320; padding: 18px; border-radius: 16px; border: 1px solid var(--line); font-size: 13px; flex-shrink: 0; box-shadow: inset 0 0 10px rgba(0,0,0,0.3);">
+        <div style="width: min(280px, 100%); background: #121320; padding: 18px; border-radius: 16px; border: 1px solid var(--line); font-size: 13px; flex-shrink: 0; box-shadow: inset 0 0 10px rgba(0,0,0,0.3); position: relative; z-index: 1;">
           <div style="margin-bottom: 15px;">
             <span style="color: var(--muted); display: block; margin-bottom: 4px; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">Gêneros:</span>
             <span id="modal-genres" style="color: var(--white); font-weight: 700;"></span>
@@ -1078,7 +1167,7 @@ footer a:hover {
   </div>
 </div>
 
-<!-- Importar o banco de dados de 8276 títulos gerado automaticamente pelo Python -->
+<!-- Importar o banco de dados de 9528 títulos gerado automaticamente pelo Python -->
 <script src="items.js"></script>
 
 <script>
@@ -1092,10 +1181,16 @@ const banners={
 };
 
 let activeType='home', activePage=1;
-const PAGE_SIZE=8; // 8 itens por página para ficar perfeito em grades de 4 ou 2 colunas
+const PAGE_SIZE=12; // 12 itens por página para ficar perfeito em grades de 4, 3 ou 2 colunas
 
 // Auxiliar para limpar acentos em português para buscas precisas
 const cleanText = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+// Auxiliar para extrair IMDb ID caso o usuário cole uma URL inteira do IMDb
+const extractIMDbId = text => {
+  const match = text.match(/(tt\d+)/i);
+  return match ? match[1] : null;
+};
 
 // Sistema de Slideshow Dinâmico do Hero Banner
 let carouselInterval;
@@ -1104,6 +1199,8 @@ let currentSlideIndex = 0;
 function buildCarousel(categoryItems) {
   const container = document.querySelector('#carousel-slides');
   const indicatorsContainer = document.querySelector('#carousel-indicators');
+  
+  if (!container || !indicatorsContainer) return;
   
   clearInterval(carouselInterval);
   container.innerHTML = '';
@@ -1129,7 +1226,7 @@ function buildCarousel(categoryItems) {
   let indicatorsHTML = '';
   
   featured.forEach((item, index) => {
-    const kicker = activeType === 'home' ? 'DESTAQUES DA SEMANA' : activeType === 'filme' ? 'DESTAQUE EM FILMES' : activeType === 'serie' ? 'DESTAQUE EM SÉRIES' : 'DESTAQUE EM ANIMES';
+    const kicker = activeType === 'home' ? 'EM DESTAQUE HOJE' : activeType === 'filme' ? 'DESTAQUE EM FILMES' : activeType === 'serie' ? 'DESTAQUE EM SÉRIES' : 'DESTAQUE EM ANIMES';
     const overview = item.sin.length > 200 ? item.sin.slice(0, 200) + '...' : item.sin;
     
     slidesHTML += `
@@ -1185,7 +1282,7 @@ function buildCarousel(categoryItems) {
   startTimer();
 }
 
-// Renderizador das Prateleiras Horizontais (Netflix/HBO Max-Style) para a Página Inicial
+// Renderizador das Prateleiras Horizontais (Netflix/HBO Max-Style) para a Página Inicial - CLASSIFICADO POR POPULARIDADE E NOVIDADES!
 function buildHomeRows() {
   const homeRows = document.querySelector('#home-rows');
   const gridSection = document.querySelector('#grid-section');
@@ -1196,24 +1293,42 @@ function buildHomeRows() {
   homeRows.style.display = 'block';
   gridSection.style.display = 'none';
   
-  // Extrair os 20 principais de cada categoria
-  const popularMovies = items.filter(x => x.t === 'filme').slice(0, 20);
-  const popularSeries = items.filter(x => x.t === 'serie').slice(0, 20);
-  const popularAnimes = items.filter(x => x.t === 'anime').slice(0, 20);
+  // 1. Tendências Globais (Mais Assistidos) - Maiores blockbusters (votos > 1500, ordenado por votos decrescente)
+  const trendingAll = items
+    .filter(x => x.votes && x.votes > 1000)
+    .sort((a, b) => b.votes - a.votes)
+    .slice(0, 20);
+
+  // 2. Estreias Recentes e Novidades - Lançados de 2023 em diante, ordenados por popularidade (votos)
+  const recentReleases = items
+    .filter(x => x.y && parseInt(x.y) >= 2023)
+    .sort((a, b) => b.votes - a.votes)
+    .slice(0, 20);
+
+  // 3. Obras-Primas dos Animes (Cultura Otaku) - Animes de grande renome internacional por votos
+  const popularAnimes = items
+    .filter(x => x.t === 'anime')
+    .sort((a, b) => b.votes - a.votes)
+    .slice(0, 20);
   
-  // Renderizar o Slideshow do Topo com uma mistura de destaques populares globais
-  buildCarousel(items.slice(0, 5));
+  // Renderizar o Slideshow do Topo com o TOP 5 de obras mais populares globais!
+  const topFeatured = items
+    .filter(x => x.bg && x.votes > 2000)
+    .sort((a, b) => b.votes - a.votes)
+    .slice(0, 5);
+  
+  buildCarousel(topFeatured);
   
   // Montar HTML das Fileiras
   const rowMovies = document.querySelector('#row-movies');
   const rowSeries = document.querySelector('#row-series');
   const rowAnimes = document.querySelector('#row-animes');
   
-  if (rowMovies) rowMovies.innerHTML = popularMovies.map(renderCardHTML).join('');
-  if (rowSeries) rowSeries.innerHTML = popularSeries.map(renderCardHTML).join('');
+  if (rowMovies) rowMovies.innerHTML = trendingAll.map(renderCardHTML).join('');
+  if (rowSeries) rowSeries.innerHTML = recentReleases.map(renderCardHTML).join('');
   if (rowAnimes) rowAnimes.innerHTML = popularAnimes.map(renderCardHTML).join('');
   
-  // Atribuir eventos de clique para cada card nas fileiras de forma robusta via attribute
+  // Atribuir eventos de clique de forma limpa via delegação de dados ou listeners diretos
   document.querySelectorAll('.row-scroller .item').forEach(el => {
     el.onclick = () => openPlayer(el.getAttribute('data-id'), null, el.getAttribute('data-type'));
   });
@@ -1232,24 +1347,23 @@ function renderCardHTML(x) {
         
         <!-- Efeito de Hover Overlay Premium estilo Netflix 2026 -->
         <div class="poster-hover-overlay">
-          <div class="play-btn-circle" style="margin-bottom: 12px;">
+          <div class="play-btn-circle">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </div>
-          <div style="width: 100%; text-align: left;">
+          <div style="width: 100%; text-align: left; margin-top: auto;">
             <span style="color: #4ade80; font-size: 11px; font-weight: 850; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">${relevance}% Relevante</span>
-            <span class="poster-name" style="position: static; margin-bottom: 6px; font-size: 14.5px; -webkit-line-clamp: 1; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; font-weight: 900; line-height: 1.2;">${x.n}</span>
+            <span style="color: #fff; font-size: 13px; font-weight: 900; display: block; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2;">${x.n}</span>
             <div style="display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--muted); font-weight: 800; flex-wrap: wrap;">
               <span class="badge-pill" style="border-color: rgba(255,255,255,0.1); padding: 1px 4px;">${x.y}</span>
               <span class="badge-pill" style="border-color: rgba(43, 102, 255, 0.35); color: var(--accent); padding: 1px 4px;">★ ${x.r}</span>
             </div>
           </div>
         </div>
-        
-        <span class="poster-name">${x.n}</span>
       </div>
+      <h3 class="item-title">${x.n}</h3>
       <div class="meta">
-        <span>${x.y} ${x.dur ? `• ${x.dur.split(' ')[0]} ${x.dur.includes('Temp') ? 'Temp' : 'm'}` : ''}</span>
-        <b>★ ${x.r}</b>
+        <span>${x.y}</span>
+        <b style="display:flex;align-items:center;gap:3px;color:#ffb800;"><span style="font-size:12px;">★</span> ${x.r}</b>
       </div>
     </article>
   `;
@@ -1261,21 +1375,25 @@ function render(type=activeType, query='', page=activePage){
   
   const term=query.trim();
   const cleanQuery = cleanText(term);
-  const isIMDb = /^tt\d+$/i.test(term);
+  const detectedIMDb = extractIMDbId(term);
   
   const homeRows = document.querySelector('#home-rows');
   const gridSection = document.querySelector('#grid-section');
+  const dashboard = document.querySelector('.category-dashboard');
   
   if (!homeRows || !gridSection) return;
   
   // Ocultar banner de destaque quando uma busca estiver ativa para priorizar os resultados da busca
   if (term) {
-    document.querySelector('#banner').style.display = 'none';
+    const bannerEl = document.querySelector('#banner');
+    if (bannerEl) bannerEl.style.display = 'none';
     homeRows.style.display = 'none';
     gridSection.style.display = 'block';
   } else {
-    document.querySelector('#banner').style.display = 'block';
+    const bannerEl = document.querySelector('#banner');
+    if (bannerEl) bannerEl.style.display = 'block';
     if (type === 'home') {
+      if (dashboard) dashboard.classList.remove('search-active');
       buildHomeRows();
       return;
     } else {
@@ -1284,21 +1402,22 @@ function render(type=activeType, query='', page=activePage){
     }
   }
   
-  // 1. SE FOR UM ID DO IMDb (ttXXXXXXX)
-  if (isIMDb) {
+  // 1. SE FOR UM ID DO IMDb OU LINK DO IMDb DETECTADO
+  if (detectedIMDb) {
+    if (dashboard) dashboard.classList.add('search-active');
     heading.textContent = 'Busca Especial IMDb';
     count.textContent = '1 ID detectado';
     catalog.innerHTML = `
-      <div style="grid-column: 1/-1; background: #121625; border: 2px solid var(--accent); border-radius: 18px; padding: 40px; text-align: center; box-shadow: 0 0 30px rgba(43,102,255,0.15);">
+      <div style="grid-column: 1/-1; background: #121625; border: 2px solid var(--accent); border-radius: 18px; padding: 40px; text-align: center; box-shadow: 0 0 30px rgba(43,102,255,0.15); margin-top: 10px;">
         <span style="font-size: 45px; display: block; margin-bottom: 15px; filter: drop-shadow(0 0 5px var(--accent));">🎬</span>
         <h3 style="margin: 0 0 10px; font-size: 22px; color: #fff; letter-spacing: 1px;">ID do IMDb Detectado!</h3>
         <p style="color: var(--muted); font-size: 13.5px; margin: 0 0 25px; line-height: 1.6;">
-          Você digitou o código identificador direto do IMDb: <strong style="color:var(--accent); font-size:16px;">${term}</strong>.<br>
-          Nossa plataforma consegue reproduzir qualquer título do IMDb diretamente. Escolha o formato para reproduzir:
+          Você digitou ou colou um código/link direto do IMDb: <strong style="color:#60a5fa; font-size:16px;">${detectedIMDb}</strong>.<br>
+          Nossa plataforma reproduz qualquer título do IMDb instantaneamente. Escolha o formato de exibição:
         </p>
         <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-          <button onclick="openPlayer('${term}', 'Conteúdo IMDb (${term})', 'filme')" style="background: var(--accent); color: #fff; border: 0; padding: 14px 28px; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 13px; transition: 0.2s; box-shadow: 0 4px 15px rgba(43,102,255,0.3);">▶ Assistir como Filme</button>
-          <button onclick="openPlayer('${term}', 'Conteúdo IMDb (${term})', 'serie')" style="background: #1b1b22; color: #fff; border: 1px solid var(--line); padding: 14px 28px; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 13px; transition: 0.2s;">▶ Assistir como Série / Anime</button>
+          <button onclick="openPlayer('${detectedIMDb}', 'Conteúdo IMDb (${detectedIMDb})', 'filme')" style="background: var(--accent-gradient); color: #fff; border: 0; padding: 14px 28px; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 13px; transition: 0.2s; box-shadow: 0 4px 15px rgba(43,102,255,0.3);">▶ Assistir como Filme</button>
+          <button onclick="openPlayer('${detectedIMDb}', 'Conteúdo IMDb (${detectedIMDb})', 'serie')" style="background: #1b1b22; color: #fff; border: 1px solid var(--line); padding: 14px 28px; border-radius: 10px; font-weight: bold; cursor: pointer; font-size: 13px; transition: 0.2s;">▶ Assistir como Série / Anime</button>
         </div>
       </div>
     `;
@@ -1306,27 +1425,76 @@ function render(type=activeType, query='', page=activePage){
     return;
   }
   
-  // 2. BUSCA NORMAL (GLOBAL QUANDO PESQUISA, POR ABA QUANDO SEM PESQUISA)
+  // 2. BUSCA NORMAL COM FILTROS E MODO EXPANDIDO (GRID SEM SIDEBAR NA BUSCA)
   let list = [];
   if (term) {
-    list = items.filter(x => {
-      const cleanName = cleanText(x.n);
-      const cleanOriginal = cleanText(x.on || '');
-      const cleanGenres = cleanText((x.g || []).join(' '));
-      const cleanCast = cleanText((x.cast || []).join(' '));
+    if (dashboard) dashboard.classList.add('search-active');
+    
+    // Divisão inteligente de termos em tokens para busca multi-palavra (AND search)
+    const searchWords = cleanQuery.split(/\s+/).filter(w => w.length > 0);
+    
+    if (searchWords.length > 0) {
+      const searchMatches = [];
       
-      return cleanName.includes(cleanQuery) || 
-             cleanOriginal.includes(cleanQuery) || 
-             cleanGenres.includes(cleanQuery) || 
-             cleanCast.includes(cleanQuery) || 
-             x.y.includes(cleanQuery);
-    });
+      items.forEach(x => {
+        const cleanName = cleanText(x.n || '');
+        const cleanOriginal = cleanText(x.on || '');
+        const cleanGenres = cleanText((x.g || []).join(' '));
+        const cleanSynopsis = cleanText(x.sin || '');
+        const yearStr = (x.y || '').toString();
+        
+        // Deve corresponder a TODOS os termos buscados em algum dos campos
+        const isMatch = searchWords.every(word => {
+          return cleanName.includes(word) || 
+                 cleanOriginal.includes(word) || 
+                 cleanGenres.includes(word) || 
+                 cleanSynopsis.includes(word) || 
+                 yearStr.includes(word);
+        });
+        
+        if (isMatch) {
+          // Motor de Relevância Inteligente (Algoritmo de Scoring Avançado)
+          let score = 0;
+          
+          // Match Exato
+          if (cleanName.includes(cleanQuery)) score += 2000;
+          if (cleanName.startsWith(cleanQuery)) score += 1000;
+          if (cleanOriginal.includes(cleanQuery)) score += 500;
+          
+          // Match por palavras individuais
+          searchWords.forEach(word => {
+            if (cleanName.includes(word)) score += 300;
+            if (cleanOriginal.includes(word)) score += 150;
+            if (cleanGenres.includes(word)) score += 80;
+            if (yearStr.includes(word)) score += 80;
+            if (cleanSynopsis.includes(word)) score += 20;
+          });
+          
+          // Impulso ponderado por popularidade (Log das contagens de votos no TMDb!)
+          const votes = parseInt(x.votes) || 0;
+          if (votes > 0) {
+            score += Math.log10(votes) * 150;
+          }
+          
+          searchMatches.push({ item: x, score: score });
+        }
+      });
+      
+      // Ordena por score decrescente (Mais relevante e popular primeiro!)
+      searchMatches.sort((a, b) => b.score - a.score);
+      list = searchMatches.map(m => m.item);
+    }
+    
     heading.textContent = `Busca por: "${term}"`;
   } else {
+    if (dashboard) dashboard.classList.remove('search-active');
+    
     // Obter filtros ativos da sidebar
     const ratingFilter = document.querySelector('#filter-rating').value;
     const yearFilter = document.querySelector('#filter-year').value;
+    const sortFilter = document.querySelector('#filter-sort').value;
     
+    // Filtrar abas normais
     list = items.filter(x => {
       if (x.t !== type) return false;
       
@@ -1349,12 +1517,38 @@ function render(type=activeType, query='', page=activePage){
       return true;
     });
     
+    // ORDENAÇÃO DE OURO: Seleção dinâmica do usuário (Popularidade, Avaliação, Recente, A-Z)
+    if (sortFilter === 'rating') {
+      list.sort((a, b) => {
+        const rA = parseFloat(a.r) || 0;
+        const rB = parseFloat(b.r) || 0;
+        if (rB !== rA) return rB - rA;
+        return (b.votes || 0) - (a.votes || 0); // Desempate por votos
+      });
+    } else if (sortFilter === 'year') {
+      list.sort((a, b) => {
+        const yA = parseInt(a.y) || 0;
+        const yB = parseInt(b.y) || 0;
+        if (yB !== yA) return yB - yA;
+        return (b.votes || 0) - (a.votes || 0); // Desempate por votos
+      });
+    } else if (sortFilter === 'name') {
+      list.sort((a, b) => a.n.localeCompare(b.n, 'pt-BR'));
+    } else { // default is 'votes' (Popularidade por contagem de votos)
+      list.sort((a, b) => {
+        const vA = parseInt(a.votes) || 0;
+        const vB = parseInt(b.votes) || 0;
+        return vB - vA;
+      });
+    }
+    
     heading.textContent = type==='filme'?'Filmes':type==='serie'?'Séries':'Animes';
     updateBanner(type);
     
-    // Atualizar o Slideshow de Destaques Dinâmico com os top 5 títulos desta aba
+    // Atualizar o Slideshow de Destaques Dinâmico com os top 5 títulos mais famosos desta aba
     if (page === 1) {
-      buildCarousel(list);
+      const bannerList = list.slice(0, 5);
+      buildCarousel(bannerList);
     }
   }
   
@@ -1443,8 +1637,6 @@ function openPlayer(id, name, type){
   const modalOriginalTitle = document.querySelector('#modal-original-title');
   const modalSin = document.querySelector('#modal-sin');
   const modalGenres = document.querySelector('#modal-genres');
-  const modalCast = document.querySelector('#modal-cast');
-  const modalCastContainer = document.querySelector('#modal-cast-container');
   const imdbLink = document.querySelector('#imdb-link');
   
   if (isIMDb) {
@@ -1464,7 +1656,6 @@ function openPlayer(id, name, type){
     if (modalOriginalTitle) modalOriginalTitle.textContent = '';
     if (modalSin) modalSin.textContent = 'Título importado diretamente via ID externo do IMDb. Sinopse indisponível.';
     if (modalGenres) modalGenres.textContent = '—';
-    if (modalCastContainer) modalCastContainer.style.display = 'none';
     if (imdbLink) imdbLink.href = `https://www.imdb.com/title/${id}`;
     
   } else {
@@ -1497,15 +1688,6 @@ function openPlayer(id, name, type){
     if (modalOriginalTitle) modalOriginalTitle.textContent = item.on ? `Título original: ${item.on}` : '';
     if (modalSin) modalSin.textContent = item.sin;
     if (modalGenres) modalGenres.textContent = item.g && item.g.length ? item.g.join(', ') : '—';
-    
-    if (modalCastContainer && modalCast) {
-      if (item.cast && item.cast.length) {
-        modalCast.textContent = item.cast.join(', ');
-        modalCastContainer.style.display = 'block';
-      } else {
-        modalCastContainer.style.display = 'none';
-      }
-    }
     
     if (imdbLink) {
       if (item.imdb) {
@@ -1550,15 +1732,18 @@ document.querySelectorAll('.tab').forEach(tab=>tab.onclick=()=>{
 // Configurar ouvintes de filtros da Sidebar (Garante re-filtragem instantânea ao selecionar)
 const selectRating = document.querySelector('#filter-rating');
 const selectYear = document.querySelector('#filter-year');
+const selectSort = document.querySelector('#filter-sort');
 const btnResetFilters = document.querySelector('#btn-reset-filters');
 
 if (selectRating) selectRating.onchange = () => render(activeType, document.querySelector('#search').value, 1);
 if (selectYear) selectYear.onchange = () => render(activeType, document.querySelector('#search').value, 1);
+if (selectSort) selectSort.onchange = () => render(activeType, document.querySelector('#search').value, 1);
 
 if (btnResetFilters) {
   btnResetFilters.onclick = () => {
     if (selectRating) selectRating.value = 'all';
     if (selectYear) selectYear.value = 'all';
+    if (selectSort) selectSort.value = 'votes'; // Volta ao padrão de Popularidade
     render(activeType, document.querySelector('#search').value, 1);
   };
 }
@@ -1576,5 +1761,5 @@ document.onkeydown=e=>{
 // Renderizar aba "home" por padrão ao abrir o site
 render('home');
 </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a273d9f4bea4346c',t:'MTc4NjA4MDIyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
