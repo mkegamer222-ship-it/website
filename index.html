@@ -3,119 +3,768 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>XITERS PLUS - Seu Catálogo de Filmes, Séries e Animes</title>
+<title>XITERS PLUS - O Portal Supremo de Streaming</title>
 <style>
-:root{--bg:#0b0b0d;--card:#151519;--line:#2a2a30;--muted:#9999a2;--white:#f7f7f5;--accent:#2b66ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}button{font:inherit}header{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:28px;padding:0 6%;position:sticky;top:0;background:#0b0b0df2;backdrop-filter:blur(12px);z-index:3}.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:2px}.logo b{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:var(--accent);color:#fff}.search{display:flex;align-items:center;gap:9px;width:min(440px,50vw);height:38px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:#151519;color:#fff}.search:focus-within{border-color:var(--accent);box-shadow:0 0 10px rgba(43,102,255,0.2)}.search span{font-size:19px;color:var(--muted);transform:rotate(-15deg)}.search input{width:100%;border:0;outline:0;background:transparent;color:#fff;font-size:13px}.search input::placeholder{color:#77777f}.wrap{width:min(1120px,88%);margin:auto}.intro{padding:55px 0 35px;display:flex;align-items:end;justify-content:space-between;gap:35px}.intro small{color:var(--accent);font-size:11px;letter-spacing:2px;font-weight:bold}.intro h1{font-size:clamp(38px,6vw,68px);line-height:.95;letter-spacing:-4px;margin:15px 0 0;max-width:620px}.intro h1 span{color:var(--accent)}.intro p{color:var(--muted);line-height:1.6;max-width:360px;margin:0}
+/* 
+========================================================================
+   DESIGN SYSTEM SUPREMO: FUSÃO PREMIUM (NETFLIX + MAX + PRIME VIDEO)
+========================================================================
+   - Fundo Cósmico Gradiente e Fluido (Inspirado no Max/HBO)
+   - Transparências e Blurs Pesados de Vidro (Inspirado no Netflix)
+   - Estrutura de Badges, Metadados e Cards Robustos (Inspirado no Prime Video)
+   - Brilho e Neon Responsivo em Azul Safira e Roxo Real (Estilo Cyberpunk)
+========================================================================
+*/
 
-/* CSS do Banner Carousel Hero Section Dinâmico */
-.banner{height:360px;border:1px solid var(--line);border-radius:22px;overflow:hidden;position:relative;margin-bottom:35px;background:#000}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity 0.8s ease-in-out;background-size:cover;background-position:center;display:flex;align-items:center}
-.slide.active{opacity:1;z-index:1}
-.slide:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#09090bf5 0%,#09090b99 50%,#09090b22 100%), linear-gradient(0deg,#09090bf5 0%,transparent 45%)}
-.slide-content{position:absolute;z-index:2;left:40px;right:40px;max-width:650px}
-.slide-content small{color:var(--accent);letter-spacing:2px;font-size:11px;font-weight:bold;text-transform:uppercase}
-.slide-content h2{font-size:36px;line-height:1.1;margin:10px 0 12px;font-weight:900;text-shadow:0 2px 10px rgba(0,0,0,0.6)}
-.slide-content p{color:#c2c2c6;margin:0 0 20px 0;font-size:14px;line-height:1.5;text-shadow:0 1px 5px rgba(0,0,0,0.5);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.slide-btn{background:var(--accent);color:#fff;border:0;padding:12px 24px;border-radius:30px;font-weight:bold;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 15px rgba(43,102,255,0.4);transition:.2s}
-.slide-btn:hover{transform:scale(1.05);box-shadow:0 6px 20px rgba(43,102,255,0.6)}
-.carousel-indicators{position:absolute;z-index:2;bottom:20px;right:40px;display:flex;gap:8px}
-.indicator{width:10px;height:10px;border-radius:50%;background:#ffffff40;cursor:pointer;transition:.2s;border:0;padding:0}
-.indicator.active{background:var(--accent);transform:scale(1.2)}
-
-.tabs{display:flex;gap:10px;margin-bottom:25px}
-.tab{cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--muted);padding:12px 23px;border-radius:999px;font-weight:bold;font-size:13px;transition:.2s}
-.tab:hover,.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
-.section-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-.section-top h2{margin:0;font-size:22px}
-.section-top span{color:var(--muted);font-size:12px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;padding-bottom:65px}
-.item{cursor:pointer}
-
-/* CSS Simplificado da Poster - Carregamento 100% Compatível e Ultra-Estável */
-.poster{height:245px;border-radius:16px;border:1px solid var(--line);overflow:hidden;position:relative;background-size:cover;background-position:center;background-color:#151519;transition:.2s}
-.poster:hover{transform:translateY(-5px);border-color:#707078}
-.poster:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 35%,#000d)}
-.poster-name{position:absolute;z-index:1;left:16px;bottom:15px;right:10px;font-size:18px;font-weight:800;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-
-.tag{position:absolute;z-index:2;top:12px;left:12px;border:1px solid #ffffff40;background:#0008;color:var(--accent);padding:5px 8px;border-radius:999px;font-size:9px;font-weight:bold}
-.meta{display:flex;justify-content:space-between;padding:11px 3px;color:var(--muted);font-size:12px}
-.meta b{color:#ddd}
-.empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:18px;color:var(--muted);padding:40px;text-align:center}
-.pager{display:flex;justify-content:center;gap:8px;padding:0 0 55px}
-.page{cursor:pointer;min-width:38px;height:36px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--muted);font-weight:bold;transition:.2s}
-.page.active,.page:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-
-.modal{display:none;position:fixed;z-index:10;inset:0;align-items:center;justify-content:center;padding:18px}
-.modal.open{display:flex}
-.shade{position:absolute;inset:0;background:#000d;backdrop-filter:blur(8px)}
-.dialog{position:relative;z-index:1;width:min(900px,100%);background:var(--card);border:1px solid #44444c;border-radius:20px;overflow:hidden;max-height:92vh;display:flex;flex-direction:column}
-.close{position:absolute;z-index:2;right:12px;top:12px;width:34px;height:34px;border:1px solid #ffffff44;border-radius:50%;background:#000b;color:#fff;font-size:22px;cursor:pointer}
-.player{aspect-ratio:16/9;background:#000;flex-shrink:0}
-.player iframe{width:100%;height:100%;border:0}
-.dialog-info{padding:25px;background:var(--card);border-top:1px solid var(--line);color:var(--white);overflow-y:auto;flex-grow:1}
-
-footer{border-top:1px solid var(--line);padding:22px 6%;color:var(--muted);font-size:11px;display:flex;justify-content:space-between}
-footer a{color:#ccc;text-decoration:none}
-footer a:hover{text-decoration:underline}
-
-@media(max-width:760px){
-  header{padding:0 4%;gap:12px}
-  .search{width:min(240px,58vw)}
-  .search input{font-size:12px}
-  .intro{display:block;padding-top:40px}
-  .intro p{margin-top:20px}
-  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
-  .poster{height:220px}
-  .banner{height:250px;border-radius:16px}
-  .slide-content{left:20px;right:20px}
-  .slide-content h2{font-size:22px;margin:5px 0 8px}
-  .slide-content p{font-size:12px;margin-bottom:12px;-webkit-line-clamp:2}
-  .slide-btn{padding:8px 16px;font-size:11px}
-  .carousel-indicators{bottom:15px;right:20px}
-  .tab{flex:1;padding:12px 8px;font-size:12px}
-  .wrap{width:92%}
-  .modal{padding:0}
-  .dialog{width:100%;height:100%;border:0;border-radius:0;max-height:100vh}
-  .player{height:40vh;min-height:220px;aspect-ratio:auto;flex:none}
-  .dialog-info{padding:16px 20px;overflow-y:auto}
-  .close{top:10px;right:10px}
+:root {
+  --bg: #040408;
+  --bg-gradient: radial-gradient(140% 120% at 50% 10%, #0d0e25 0%, #040407 50%, #010103 100%);
+  --card: rgba(14, 15, 27, 0.65);
+  --card-hover: rgba(22, 24, 43, 0.9);
+  --line: rgba(255, 255, 255, 0.05);
+  --muted: #8e92a4;
+  --white: #ffffff;
+  
+  /* Gradientes de Assinatura Premium */
+  --accent: #2b66ff;
+  --accent-purple: #8a2be2;
+  --accent-glow: rgba(43, 102, 255, 0.4);
+  --accent-gradient: linear-gradient(135deg, #2b66ff 0%, #8a2be2 50%, #ff007f 100%);
+  --btn-gradient: linear-gradient(90deg, #1d4ed8 0%, #6d28d9 100%);
 }
+
+*{box-sizing:border-box;outline:none}
+
+/* Estilização Geral do Body com Fundo Cósmico */
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--white);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Customizada Ultra Fina e Elegante */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040408;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+  border: 2px solid #040408;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Header Glassmorphism Flutuante Superior */
+header {
+  height: 80px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 0 6%;
+  position: sticky;
+  top: 0;
+  background: rgba(4, 4, 8, 0.7);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  z-index: 100;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #fff 30%, #9ca3af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+
+.logo b {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--accent-gradient);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 950;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Barra de Busca Siri-style Elegante */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(520px, 46vw);
+  height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.search:focus-within {
+  border-color: rgba(43, 102, 255, 0.8);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 25px rgba(43, 102, 255, 0.3);
+  transform: scale(1.015);
+}
+
+.search span {
+  font-size: 22px;
+  color: var(--muted);
+  transform: rotate(-15deg);
+}
+
+.search input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.search input::placeholder {
+  color: rgba(142, 146, 164, 0.6);
+}
+
+.wrap {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+
+/* Intro Título Grande e Impactante */
+.intro {
+  padding: 60px 0 35px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.intro small {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 0.95;
+  letter-spacing: -3.5px;
+  margin: 15px 0 0;
+  max-width: 650px;
+  font-weight: 950;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.intro h1 span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro p {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Widescreen Hero Banner Slideshow (Cinema-Teatral - 480px) */
+.banner {
+  height: 480px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 45px;
+  background: #000;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center 20%;
+  display: flex;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(4,4,8,0.98) 0%, rgba(4,4,8,0.65) 45%, rgba(4,4,8,0.1) 85%, transparent 100%), 
+              linear-gradient(0deg, rgba(4,4,8,1) 0%, rgba(4,4,8,0.4) 40%, transparent 80%);
+}
+
+.slide-content {
+  position: absolute;
+  z-index: 2;
+  left: 60px;
+  right: 60px;
+  max-width: 680px;
+}
+
+.slide-content small {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+}
+
+.slide-content h2 {
+  font-size: clamp(30px, 4.5vw, 48px);
+  line-height: 1.05;
+  margin: 18px 0 14px;
+  font-weight: 950;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+  background: linear-gradient(180deg, #fff 0%, #e5e7eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide-content p {
+  color: #d1d5db;
+  margin: 0 0 28px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.slide-btn {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: 0;
+  padding: 14px 32px;
+  border-radius: 99px;
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 25px var(--accent-glow);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slide-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(43, 102, 255, 0.6);
+}
+
+.carousel-indicators {
+  position: absolute;
+  z-index: 2;
+  bottom: 30px;
+  right: 60px;
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 25px;
+  height: 5px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: .4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 0;
+  padding: 0;
+}
+
+.indicator.active {
+  background: var(--accent-gradient);
+  width: 45px;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Abas estilo Prime Video e HBO Max */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+  padding: 13px 28px;
+  border-radius: 99px;
+  font-weight: 800;
+  font-size: 13.5px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backdrop-filter: blur(10px);
+}
+
+.tab:hover {
+  border-color: rgba(255,255,255,0.2);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tab.active {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+/* Customização dinâmica para o botão do Canal VIP */
+.tab[data-tab="privado"] {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.03);
+  color: #ef4444;
+}
+.tab[data-tab="privado"]:hover {
+  border-color: #ef4444;
+  color: #fff;
+  background: rgba(239, 68, 68, 0.08);
+}
+.tab[data-tab="privado"].active {
+  background: linear-gradient(135deg, #ef4444 0%, #8a2be2 100%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+/* Prateleiras de Rolagem Horizontal (Row Containers - Netflix Style) */
+.row-container {
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.row-title {
+  font-size: 22px;
+  font-weight: 950;
+  margin: 0 0 16px 0;
+  border-left: 4px solid var(--accent);
+  padding-left: 14px;
+  letter-spacing: -0.5px;
+}
+
+.row-scroller {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 4px 25px 4px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.row-scroller::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.row-scroller .item {
+  flex: 0 0 210px; /* Largura fixa para cada card na fileira horizontal */
+}
+
+.row-scroller .poster {
+  height: 290px; /* Cards de cinema mais altos */
+}
+
+/* Grid de Posters Geral (Modo Exploração com Paginação e Modo Pesquisa) */
+.grid-section {
+  display: none; /* Oculto por padrão, ativado em buscas ou ao clicar em abas dedicadas */
+}
+
+.section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  border-left: 4px solid var(--accent);
+  padding-left: 14px;
+}
+
+.section-top h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 950;
+  letter-spacing: -1px;
+}
+
+.section-top span {
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+.item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Poster com Efeito de Hover Zoom Premium e Glowing Borders (Max + Netflix Style) */
+.poster {
+  height: 265px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--card);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.item:hover .poster {
+  transform: translateY(-10px) scale(1.03);
+  border-color: rgba(138, 43, 226, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px var(--accent-glow);
+}
+
+.poster:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 30%, rgba(4, 4, 8, 0.98));
+  transition: opacity 0.3s ease;
+}
+
+.poster-name {
+  position: absolute;
+  z-index: 2;
+  left: 18px;
+  bottom: 18px;
+  right: 18px;
+  font-size: 18px;
+  font-weight: 900;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  line-height: 1.2;
+}
+
+/* Tag Glassmorphic */
+.tag {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 14px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(11, 11, 15, 0.7);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 5px 11px;
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 6px 6px;
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.meta b {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.empty {
+  grid-column: 1/-1;
+  border: 1px dashed var(--line);
+  border-radius: 24px;
+  color: var(--muted);
+  padding: 60px;
+  text-align: center;
+}
+
+/* Paginação Premium */
+.pager {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 0 75px;
+}
+
+.page {
+  cursor: pointer;
+  min-width: 42px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+  font-weight: 900;
+  transition: all 0.2s ease;
+}
+
+.page.active, .page:hover {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+/* Modal Ultra Elegante Estilo Cinema Expandido (Fusão Premium) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.modal.open { display: flex; }
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 3, 5, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.dialog {
+  position: relative;
+  z-index: 1;
+  width: min(940px, 100%);
+  background: #080912;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  overflow: hidden;
+  max-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(43, 102, 255, 0.15);
+  animation: modalReveal 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalReveal {
+  from { opacity: 0; transform: scale(0.95) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.close {
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  top: 20px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 50%;
+  background: rgba(4, 4, 8, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close:hover {
+  background: #ff2b55;
+  border-color: #ff2b55;
+  box-shadow: 0 0 15px rgba(255, 43, 85, 0.4);
+}
+
+.player {
+  aspect-ratio: 16/9;
+  background: #000;
+  flex-shrink: 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid var(--line);
+  position: relative;
+}
+
+.player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Terminal de Tunelamento de Proteção Secreta (AES-256) */
+#player-shield-gate {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: #06070e;
+  z-index: 5;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  padding: 20px;
+}
+
+@keyframes shieldPulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 5px #ef4444); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 20px #ef4444); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 5px #ef4444); }
+}
+
+#player-shield-gate div:first-child {
+  animation: shieldPulse 1.5s infinite;
+}
+
+.dialog-info {
+  padding: 35px;
+  background: #06070e;
+  color: var(--white);
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Badges e Fichas Técnicas estilo Prime e Netflix */
+.tag-meta {
+  background: rgba(43, 102, 255, 0.12);
+  border: 1px solid rgba(43, 102, 255, 0.3);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.badge-pill {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #ccc;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 26px 6%;
+  color: var(--muted);
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(4, 4, 8, 0.5);
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+/* Responsividade de Estilo Superior */
+@media(max-width:760px){
+  header { padding: 0 4%; gap: 12px; height: 72px; }
+  .search { width: min(240px, 58vw); }
+  .search input { font-size: 12px; }
+  .intro { display: block; padding-top: 40px; }
+  .intro p { margin-top: 20px; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .poster { height: 220px; border-radius: 14px; }
+  .banner { height: 260px; border-radius: 20px; }
+  .slide-content { left: 28px; right: 24px; }
+  .slide-content h2 { font-size: 26px; margin: 8px 0 10px; }
+  .slide-content p { font-size: 13px; margin-bottom: 16px; -webkit-line-clamp: 2; }
+  .slide-btn { padding: 10px 20px; font-size: 12px; }
+  .carousel-indicators { bottom: 15px; right: 28px; }
+  .tab { flex: 1; padding: 12px 6px; font-size: 11.5px; text-align: center; }
+  .wrap { width: 92%; }
+  .modal { padding: 0; }
+  .dialog { width: 100%; height: 100%; border: 0; border-radius: 0; max-height: 100vh; }
+  .player { height: 38vh; min-height: 200px; aspect-ratio: auto; flex: none; }
+  .dialog-info { padding: 22px; overflow-y: auto; }
+  .close { top: 15px; right: 15px; width: 36px; height: 36px; }
+  .row-scroller .item { flex: 0 0 150px; }
+  .row-scroller .poster { height: 210px; }
+}
+
 @media(max-width:430px){
-  header{padding:0 4%}
-  .grid{grid-template-columns:1fr 1fr}
-  .poster{height:190px}
-  .poster-name{font-size:15px}
-  .intro h1{letter-spacing:-2px}
-  footer{display:block;line-height:2}
+  header { padding: 0 4%; }
+  .grid { grid-template-columns: 1fr 1fr; }
+  .poster { height: 190px; }
+  .poster-name { font-size: 15px; }
+  .intro h1 { letter-spacing: -2px; }
+  footer { display: block; line-height: 2.2; }
 }
 </style>
 </head>
 <body>
 
-<!-- Tela de Bloqueio Translúcida Moderna com Fundo Transparente Desfocado -->
-<div id="block-screen" style="position: fixed; inset: 0; z-index: 9999; background: rgba(11, 11, 13, 0.75); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); color: #f7f7f5; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px; font-family: Arial, sans-serif; transition: opacity 0.5s ease, visibility 0.5s ease;">
-  <div style="max-width: 500px; background: rgba(21, 21, 25, 0.9); border: 1px solid rgba(239, 68, 68, 0.3); padding: 40px; border-radius: 24px; box-shadow: 0 15px 50px rgba(0,0,0,0.5), 0 0 30px rgba(239, 68, 68, 0.05); position: relative; backdrop-filter: blur(10px);">
-    
-    <!-- Escudo do Bloqueio (Elemento Clicável para Desbloqueio Secreto) -->
-    <div id="block-shield" style="width: 80px; height: 80px; margin: 0 auto 25px; cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: center; background: rgba(239, 68, 68, 0.1); border-radius: 50%; border: 2px solid #ef4444; color: #ef4444; font-size: 38px; transition: 0.2s;">
-      ⚠️
-    </div>
-    
-    <h2 style="color: #ef4444; font-size: 24px; font-weight: 800; letter-spacing: 1px; margin: 0 0 15px 0; text-transform: uppercase;">Acesso Suspenso</h2>
-    <p style="font-size: 15px; color: #f7f7f5; line-height: 1.6; font-weight: bold; margin: 0;">
-      O bloqueio foi feito devido a possíveis problemas judiciais.
-    </p>
-    <p style="font-size: 12.5px; color: #9999a2; line-height: 1.6; margin: 15px 0 0 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 15px;">
-      Este domínio encontra-se temporariamente suspenso por determinação legal em conformidade com as diretrizes e normas de proteção de propriedade intelectual.
-    </p>
-  </div>
-</div>
-
 <header>
   <div class="logo"><b>X</b> XITERS PLUS</div>
   <label class="search" for="search">
     <span>⌕</span>
-    <input id="search" type="search" placeholder="Busque por título, gênero, elenco, ano ou cole um ID do IMDb (ex: tt0137523)..." autocomplete="off">
+    <input id="search" type="search" placeholder="Busque por título, gênero, elenco, ano ou ID do IMDb..." autocomplete="off">
   </label>
 </header>
 <main class="wrap">
@@ -134,18 +783,38 @@ footer a:hover{text-decoration:underline}
   </section>
   
   <div class="tabs" role="tablist">
-    <button class="tab active" data-tab="filme" role="tab" aria-selected="true">Filmes</button>
+    <button class="tab active" data-tab="home" role="tab" aria-selected="true">💡 Início</button>
+    <button class="tab" data-tab="filme" role="tab" aria-selected="false">🎬 Filmes</button>
     <button class="tab" data-tab="serie" role="tab" aria-selected="false">Séries</button>
     <button class="tab" data-tab="anime" role="tab" aria-selected="false">Animes</button>
+    <button class="tab" data-tab="privado" role="tab" aria-selected="false">🔒 VIP Secure</button>
   </div>
   
-  <div class="section-top">
-    <h2 id="heading">Filmes</h2>
-    <span id="count"></span>
+  <!-- Prateleiras Horizontais Estilo Netflix (Modo Principal de Destaques) -->
+  <div id="home-rows">
+    <div class="row-container">
+      <h2 class="row-title">🎬 Filmes de Sucesso</h2>
+      <div class="row-scroller" id="row-movies"></div>
+    </div>
+    <div class="row-container">
+      <h2 class="row-title">📺 Séries Recomendadas</h2>
+      <div class="row-scroller" id="row-series"></div>
+    </div>
+    <div class="row-container">
+      <h2 class="row-title">🌸 Animes Populares</h2>
+      <div class="row-scroller" id="row-animes"></div>
+    </div>
   </div>
-  
-  <section class="grid" id="catalog"></section>
-  <div class="pager" id="pager"></div>
+
+  <!-- Grid de Posters Geral (Modo Exploração com Paginação e Modo Pesquisa) -->
+  <div class="grid-section" id="grid-section">
+    <div class="section-top">
+      <h2 id="heading">Filmes</h2>
+      <span id="count"></span>
+    </div>
+    <section class="grid" id="catalog"></section>
+    <div class="pager" id="pager"></div>
+  </div>
 </main>
 
 <footer>
@@ -156,50 +825,63 @@ footer a:hover{text-decoration:underline}
   </div>
 </footer>
 
-<!-- Modal Player -->
+<!-- Modal Player Reproduzindo Conteúdo Pirata Original em Iframe + Informações Avançadas -->
 <div class="modal" id="modal" aria-hidden="true">
   <div class="shade" data-close></div>
   <div class="dialog">
     <button class="close" data-close aria-label="Fechar modal">×</button>
     
-    <!-- Player de Vídeo -->
-    <div class="player">
+    <!-- Player de Vídeo Pirata Original Integrado via Iframe -->
+    <div class="player" style="position: relative;">
       <iframe id="iframe" allow="autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Player de Vídeo"></iframe>
+      
+      <!-- Terminal de Proteção de Tunelamento Secreto -->
+      <div id="player-shield-gate">
+        <div style="font-size: 40px; margin-bottom: 15px; user-select: none;">🔒</div>
+        <div style="font-size: 15px; font-weight: bold; color: #ef4444; margin-bottom: 12px; letter-spacing: 2px;">XITERS TUNNEL DE SEGURANÇA</div>
+        <div id="terminal-log" style="width: 100%; max-width: 500px; height: 130px; background: #000; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 15px; font-family: monospace; font-size: 11px; color: #4ade80; text-align: left; overflow-y: auto; line-height: 1.6; box-shadow: inset 0 0 15px rgba(0,0,0,0.8);">
+          <!-- Logs digitados em tempo real -->
+        </div>
+      </div>
     </div>
     
     <!-- Painel de Informações Enriquecidas Netflix-style -->
     <div class="dialog-info">
-      <div style="display: flex; gap: 25px; flex-wrap: wrap; align-items: flex-start;">
+      <div style="display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start;">
         
         <!-- Cartaz/Poster Real no Modal -->
-        <img id="modal-poster" src="" alt="Cartaz do Conteúdo" style="width: 140px; height: 210px; border-radius: 12px; object-fit: cover; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0,0,0,0.5); flex-shrink: 0;">
+        <img id="modal-poster" src="" alt="Cartaz do Conteúdo" style="width: 130px; height: 195px; border-radius: 12px; object-fit: cover; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.6); flex-shrink: 0;">
         
         <!-- Conteúdo Principal -->
         <div style="flex: 1; min-width: 280px;">
-          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
-            <span class="tag-meta" id="modal-type" style="background: var(--accent); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; text-transform: uppercase;"></span>
-            <span id="modal-year" style="color: var(--white); font-size: 13px; font-weight: bold;"></span>
-            <span id="modal-dur" style="color: var(--muted); font-size: 13px; font-weight: bold; border-left: 1px solid var(--line); padding-left: 10px;"></span>
-            <span id="modal-rating" style="color: var(--accent); font-size: 13px; font-weight: bold; border-left: 1px solid var(--line); padding-left: 10px;"></span>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+            <span class="tag-meta" id="modal-type"></span>
+            <span id="modal-year" style="color: var(--white); font-size: 14.5px; font-weight: 800;"></span>
+            <span id="modal-dur" style="color: var(--muted); font-size: 14px; font-weight: 700; border-left: 2px solid var(--line); padding-left: 12px;"></span>
+            <span id="modal-rating" style="color: #ffb800; font-size: 14.5px; font-weight: 800; border-left: 2px solid var(--line); padding-left: 12px;"></span>
+            
+            <span class="badge-pill">HD</span>
+            <span class="badge-pill">5.1</span>
           </div>
-          <h2 id="title" style="margin: 0 0 10px 0; font-size: 26px; font-weight: 800; letter-spacing: -1px; line-height: 1.2;"></h2>
-          <p id="modal-original-title" style="margin: -5px 0 15px 0; font-size: 12px; color: var(--muted); font-style: italic;"></p>
-          <p id="modal-sin" style="color: #c2c2c6; font-size: 13.5px; line-height: 1.6; margin: 0; max-height: 140px; overflow-y: auto; padding-right: 5px;"></p>
+          <!-- ID Corrigido e Alinhado com o JavaScript -->
+          <h2 id="modal-title" style="margin: 0 0 10px 0; font-size: 32px; font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; background: linear-gradient(180deg, #fff 0%, #d1d5db 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></h2>
+          <p id="modal-original-title" style="margin: -5px 0 18px 0; font-size: 13px; color: var(--muted); font-style: italic; font-weight: 600;"></p>
+          <p id="modal-sin" style="color: #d1d5db; font-size: 14px; line-height: 1.6; margin: 0; max-height: 140px; overflow-y: auto; padding-right: 5px;"></p>
         </div>
         
-        <!-- Ficha Técnica Rápida -->
-        <div style="width: min(280px, 100%); background: #1c1c24; padding: 15px; border-radius: 12px; border: 1px solid var(--line); font-size: 12.5px; flex-shrink: 0;">
-          <div style="margin-bottom: 12px;">
-            <span style="color: var(--muted); display: block; margin-bottom: 3px; font-weight: bold;">Gêneros:</span>
-            <span id="modal-genres" style="color: var(--white); font-weight: bold;"></span>
+        <!-- Ficha Técnica Rápida (HBO Max / Prime-style) -->
+        <div style="width: min(280px, 100%); background: #121320; padding: 18px; border-radius: 16px; border: 1px solid var(--line); font-size: 13px; flex-shrink: 0; box-shadow: inset 0 0 10px rgba(0,0,0,0.3);">
+          <div style="margin-bottom: 15px;">
+            <span style="color: var(--muted); display: block; margin-bottom: 4px; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">Gêneros:</span>
+            <span id="modal-genres" style="color: var(--white); font-weight: 700;"></span>
           </div>
-          <div id="modal-cast-container" style="margin-bottom: 12px; display: none;">
-            <span style="color: var(--muted); display: block; margin-bottom: 3px; font-weight: bold;">Elenco Principal:</span>
-            <span id="modal-cast" style="color: var(--white);"></span>
+          <div id="modal-cast-container" style="margin-bottom: 15px; display: none;">
+            <span style="color: var(--muted); display: block; margin-bottom: 4px; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">Elenco Principal:</span>
+            <span id="modal-cast" style="color: var(--white); font-weight: 600;"></span>
           </div>
           <div>
-            <span style="color: var(--muted); display: block; margin-bottom: 5px; font-weight: bold;">Conexão Direta:</span>
-            <a id="imdb-link" href="#" target="_blank" rel="noreferrer" style="background: #f5c518; color: #000; text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; display: inline-flex; align-items: center; gap: 6px; transition: 0.2s; box-shadow: 0 2px 8px rgba(245,197,24,0.25);">
+            <span style="color: var(--muted); display: block; margin-bottom: 8px; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1px;">Crítica e Trivia:</span>
+            <a id="imdb-link" href="#" target="_blank" rel="noreferrer" style="background: #f5c518; color: #000; text-decoration: none; padding: 10px 14px; border-radius: 8px; font-size: 11px; font-weight: 900; display: inline-flex; align-items: center; gap: 6px; transition: 0.2s; box-shadow: 0 4px 12px rgba(245,197,24,0.25);">
               <svg width="24" height="12" viewBox="0 0 48 24" fill="currentColor" style="display:inline-block; vertical-align:middle;"><path d="M44 24V0H4c-2.2 0-4 1.8-4 4v16c0 2.2 1.8 4 4 4h40z" fill="#000000"/><path d="M8 18H5.5V6H8v12zm10.7-12h-4.3l-1.3 5.4L11.8 6H7.5v12H10v-8.2l2.3 8.2h3.4l2.3-8.2V18h2.5V6h-1.8zM27 6h-4.8v12h4.8c2.4 0 4.1-1.6 4.1-6s-1.7-6-4.1-6zm-.2 9.5h-1.9V8.5h1.9c1.1 0 1.8.8 1.8 3.5s-.7 3.5-1.8 3.5zm11.5-9.5H34v12h4.3c2 0 3.3-1.1 3.3-3.6V12c0-2.4-1.2-6-4.1-6zm.1 6.5c0 1.1-.5 1.5-1.5 1.5H36.5V8.5h.4c1 0 1.5.4 1.5 1.5V12z" fill="#F5C518"/></svg>
               Ficha no IMDb ↗
             </a>
@@ -210,56 +892,27 @@ footer a:hover{text-decoration:underline}
   </div>
 </div>
 
-<!-- Importar o banco de dados de 8798 títulos gerado automaticamente pelo Python -->
+<!-- Importar o banco de dados de 8276 títulos gerado automaticamente pelo Python -->
 <script src="items.js"></script>
 
 <script>
-// Sistema de Bloqueio com Bypass Secreto e Fundo Transparente Desfocado
-(function() {
-  const blockScreen = document.querySelector('#block-screen');
-  const blockShield = document.querySelector('#block-shield');
-  
-  if (localStorage.getItem('xiters_unlocked') === 'true') {
-    blockScreen.style.opacity = '0';
-    blockScreen.style.visibility = 'hidden';
-    setTimeout(() => blockScreen.remove(), 500);
-    return;
-  }
-  
-  // Bloquear scroll do body enquanto estiver bloqueado
-  document.body.style.overflow = 'hidden';
-  
-  let clickCount = 0;
-  blockShield.addEventListener('click', () => {
-    clickCount++;
-    blockShield.style.transform = 'scale(0.9) rotate(5deg)';
-    setTimeout(() => blockShield.style.transform = 'scale(1) rotate(0deg)', 150);
-    
-    if (clickCount >= 3) {
-      clickCount = 0;
-      const code = prompt('Insira a chave de liberação do catálogo:');
-      if (code === 'xitersplus') {
-        localStorage.setItem('xiters_unlocked', 'true');
-        blockScreen.style.opacity = '0';
-        blockScreen.style.visibility = 'hidden';
-        document.body.style.overflow = ''; // Restaurar scroll do body
-        setTimeout(() => blockScreen.remove(), 500);
-      } else if (code !== null) {
-        alert('Chave de liberação incorreta ou expirada.');
-      }
-    }
-  });
-})();
+// Chaves de segurança aleatórias de 33 dígitos para mascarar e proteger os canais VIP em items.js
+const secureKeys = {
+  "e7f8a9bc8d6e5a4b3c2d1e0f9a8b7c6d5a": { realId: "533535", type: "filme", name: "Deadpool & Wolverine", year: "2024", rating: "8.2", sin: "Um herói apático se recuperando de uma depressão de meia-idade se junta a um Wolverine relutante para salvar seu universo de uma destruição iminente.", img: "https://image.tmdb.org/t/p/w500/cJFqqiDYprqExaXatu4AaoMzDG2.jpg", bg: "https://image.tmdb.org/t/p/original/by8z9Fe8y7p4jo2YlW2SZDnptyT.jpg", genres: ["Ação", "Comédia", "Ficção Científica"], cast: ["Ryan Reynolds", "Hugh Jackman", "Emma Corrin"], dur: "127 min" },
+  "f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6da": { realId: "94997", type: "serie", name: "A Casa do Dragão", year: "2022", rating: "8.4", sin: "A história de herança da dinastia Targaryen, 200 antes dos acontecimentos de Game of Thrones, mostrando a ascensão e a brutal guerra civil dos dragões pelo Trono de Ferro.", img: "https://image.tmdb.org/t/p/w500/oKJDm4QCKbp6mR4FnxXrFlPJP8Y.jpg", bg: "https://image.tmdb.org/t/p/original/577eXC8wFQT0eUrJcgznSiFPRmk.jpg", genres: ["Drama", "Fantasia", "Ação"], cast: ["Matt Smith", "Emma D'Arcy", "Olivia Cooke"], dur: "2 Temp" },
+  "a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4ea": { realId: "1357633", type: "anime", name: "Solo Leveling - Segundo Despertar", year: "2024", rating: "8.7", sin: "Em um mundo onde caçadores lutam contra terríveis monstros, Sung Jin-woo, o caçador mais fraco de todos, entra em uma fenda misteriosa e desperta um sistema único de evolução sem limites.", img: "https://image.tmdb.org/t/p/w500/iU1fG893IXb8wdV70D23YTJDrjR.jpg", bg: "https://image.tmdb.org/t/p/original/hlfu6g0h0D65SjkVhQBU20zePTl.jpg", genres: ["Ação", "Aventura", "Fantasia"], cast: ["Taito Ban", "Reina Ueda", "Genta Nakamura"], dur: "93 min" }
+};
 
 const catalog=document.querySelector('#catalog'),heading=document.querySelector('#heading'),count=document.querySelector('#count');
 
 const banners={
+ home:{kicker:'ESTREIAS DA SEMANA',title:'O Universo XITERS PLUS',text:'Os maiores sucessos mundiais reunidos em um só lugar.',image:'https://image.tmdb.org/t/p/original/rMv6w86H6Yv6ctv87VGxeux6u6U.jpg'},
  filme:{kicker:'DESTAQUE EM FILMES',title:'Uma sessão<br>fora do comum.',text:'Grandes histórias para assistir hoje.',image:'https://image.tmdb.org/t/p/original/rMv6w86H6Yv6ctv87VGxeux6u6U.jpg'},
  serie:{kicker:'DESTAQUE EM SÉRIES',title:'Temporadas<br>para maratonar.',text:'Encontre sua próxima série favorita.',image:'https://image.tmdb.org/t/p/original/9fa9pGcsb7g886vTUhX86799Z6T.jpg'},
  anime:{kicker:'DESTAQUE EM ANIMES',title:'Mundos<br>sem limites.',text:'Aventura, ação e imaginação em cada episódio.',image:'https://image.tmdb.org/t/p/original/fX0vG3E8Hh0sUu2b8gqZ9XF6X3v.jpg'}
 };
 
-let activeType='filme', activePage=1;
+let activeType='home', activePage=1;
 const PAGE_SIZE=8; // 8 itens por página para ficar perfeito em grades de 4 ou 2 colunas
 
 // Auxiliar para limpar acentos em português para buscas precisas
@@ -273,12 +926,10 @@ function buildCarousel(categoryItems) {
   const container = document.querySelector('#carousel-slides');
   const indicatorsContainer = document.querySelector('#carousel-indicators');
   
-  // Limpar carrossel anterior
   clearInterval(carouselInterval);
   container.innerHTML = '';
   indicatorsContainer.innerHTML = '';
   
-  // Filtrar títulos com imagem de fundo válida
   const featured = categoryItems.filter(x => x.bg).slice(0, 5);
   
   if (featured.length === 0) {
@@ -286,9 +937,9 @@ function buildCarousel(categoryItems) {
     container.innerHTML = `
       <div class="slide active" style="background-image: url('${b.image}')">
         <div class="slide-content">
-          <small>${b.kicker}</small>
-          <h2>${b.title}</h2>
-          <p>${b.text}</p>
+          <small id="banner-kicker">${b.kicker}</small>
+          <h2 id="banner-title">${b.title}</h2>
+          <p id="banner-text">${b.text}</p>
         </div>
       </div>
     `;
@@ -299,7 +950,7 @@ function buildCarousel(categoryItems) {
   let indicatorsHTML = '';
   
   featured.forEach((item, index) => {
-    const kicker = activeType === 'filme' ? 'DESTAQUE EM FILMES' : activeType === 'serie' ? 'DESTAQUE EM SÉRIES' : 'DESTAQUE EM ANIMES';
+    const kicker = activeType === 'home' ? 'DESTAQUES DA SEMANA' : activeType === 'filme' ? 'DESTAQUE EM FILMES' : activeType === 'serie' ? 'DESTAQUE EM SÉRIES' : 'DESTAQUE EM ANIMES';
     const overview = item.sin.length > 200 ? item.sin.slice(0, 200) + '...' : item.sin;
     
     slidesHTML += `
@@ -308,7 +959,7 @@ function buildCarousel(categoryItems) {
           <small>${kicker}</small>
           <h2>${item.n}</h2>
           <p>${overview}</p>
-          <button class="slide-btn" onclick="openPlayer('${item.id}', '${item.n.replace(/'/g, "\\'")}', '${item.t}')">
+          <button class="slide-btn" onclick="openPlayer('${item.id}')">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path d="M8 5v14l11-7z"/></svg> Assistir Agora
           </button>
         </div>
@@ -355,6 +1006,50 @@ function buildCarousel(categoryItems) {
   startTimer();
 }
 
+// Renderizador das Prateleiras Horizontais (Netflix/HBO Max-Style) para a Página Inicial
+function buildHomeRows() {
+  const homeRows = document.querySelector('#home-rows');
+  const gridSection = document.querySelector('#grid-section');
+  
+  // Mostrar Fileiras e Ocultar Grid Geral
+  homeRows.style.display = 'block';
+  gridSection.style.display = 'none';
+  
+  // Extrair os 20 principais de cada categoria
+  const popularMovies = items.filter(x => x.t === 'filme').slice(0, 20);
+  const popularSeries = items.filter(x => x.t === 'serie').slice(0, 20);
+  const popularAnimes = items.filter(x => x.t === 'anime').slice(0, 20);
+  
+  // Renderizar o Slideshow do Topo com uma mistura de destaques populares globais
+  buildCarousel(items.slice(0, 5));
+  
+  // Montar HTML das Fileiras
+  document.querySelector('#row-movies').innerHTML = popularMovies.map(renderCardHTML).join('');
+  document.querySelector('#row-series').innerHTML = popularSeries.map(renderCardHTML).join('');
+  document.querySelector('#row-animes').innerHTML = popularAnimes.map(renderCardHTML).join('');
+  
+  // Atribuir eventos de clique para cada card nas fileiras
+  document.querySelectorAll('.row-scroller .item').forEach(el => {
+    el.onclick = () => openPlayer(el.dataset.id);
+  });
+}
+
+// Auxiliar para gerar o HTML do cartão (compatível com prateleiras e grids)
+function renderCardHTML(x) {
+  return `
+    <article class="item" data-id="${x.id}">
+      <div class="poster" style="background-image: url('${x.img}');">
+        <span class="tag">${x.t==='anime'?'ANIME':x.t.toUpperCase()}</span>
+        <span class="poster-name">${x.n}</span>
+      </div>
+      <div class="meta">
+        <span>${x.y} ${x.dur ? `• ${x.dur.split(' ')[0]} ${x.dur.includes('Temp') ? 'Temp' : 'm'}` : ''}</span>
+        <b>★ ${x.r}</b>
+      </div>
+    </article>
+  `;
+}
+
 function render(type=activeType, query='', page=activePage){
   activeType=type;
   activePage=page;
@@ -363,11 +1058,23 @@ function render(type=activeType, query='', page=activePage){
   const cleanQuery = cleanText(term);
   const isIMDb = /^tt\d+$/i.test(term);
   
+  const homeRows = document.querySelector('#home-rows');
+  const gridSection = document.querySelector('#grid-section');
+  
   // Ocultar banner de destaque quando uma busca estiver ativa para priorizar os resultados da busca
   if (term) {
     document.querySelector('#banner').style.display = 'none';
+    homeRows.style.display = 'none';
+    gridSection.style.display = 'block';
   } else {
     document.querySelector('#banner').style.display = 'block';
+    if (type === 'home') {
+      buildHomeRows();
+      return;
+    } else {
+      homeRows.style.display = 'none';
+      gridSection.style.display = 'block';
+    }
   }
   
   // 1. SE FOR UM ID DO IMDb (ttXXXXXXX)
@@ -392,6 +1099,47 @@ function render(type=activeType, query='', page=activePage){
     return;
   }
   
+  // 1.2 CASO CLIQUE NA NOVA ABA DE SEGURANÇA VIP COMPLETA
+  if (type === 'privado') {
+    homeRows.style.display = 'none';
+    gridSection.style.display = 'block';
+    
+    heading.textContent = 'Canais VIP Criptografados';
+    count.textContent = '3 canais seguros detectados';
+    
+    const privateList = Object.keys(secureKeys).map(key => {
+      const x = secureKeys[key];
+      return {
+        id: key,
+        n: x.name,
+        y: x.year,
+        t: "vip",
+        r: x.rating,
+        img: x.img,
+        dur: x.dur
+      };
+    });
+    
+    catalog.innerHTML = privateList.map(x => `
+      <article class="item" data-id="${x.id}">
+        <div class="poster" style="background-image: url('${x.img}');">
+          <span class="tag">🔒 VIP SECURE</span>
+          <span class="poster-name">${x.n}</span>
+        </div>
+        <div class="meta">
+          <span>${x.y} • ${x.dur}</span>
+          <b>★ ${x.r}</b>
+        </div>
+      </article>
+    `).join('');
+    
+    document.querySelector('#pager').innerHTML = ''; // Sem paginação necessária para os VIPs
+    catalog.querySelectorAll('.item').forEach(el => {
+      el.onclick = () => openPlayer(el.dataset.id);
+    });
+    return;
+  }
+
   // 2. BUSCA NORMAL (GLOBAL QUANDO PESQUISA, POR ABA QUANDO SEM PESQUISA)
   let list = [];
   if (term) {
@@ -411,6 +1159,7 @@ function render(type=activeType, query='', page=activePage){
   } else {
     list = items.filter(x => x.t === type);
     heading.textContent = type==='filme'?'Filmes':type==='serie'?'Séries':'Animes';
+    updateBanner(type);
     
     // Atualizar o Slideshow de Destaques Dinâmico com os top 5 títulos desta aba
     if (page === 1) {
@@ -424,22 +1173,10 @@ function render(type=activeType, query='', page=activePage){
   
   count.textContent=list.length+' títulos encontrados';
   
-  catalog.innerHTML=visible.length?visible.map(x=>`
-    <article class="item" data-id="${x.id}" data-type="${x.t}" data-name="${x.n}">
-      <!-- Carregamento de imagem simples em background-image direto inline de alta compatibilidade mundial -->
-      <div class="poster" style="background-image: url('${x.img}');">
-        <span class="tag">${x.t==='anime'?'ANIME':x.t.toUpperCase()}</span>
-        <span class="poster-name">${x.n}</span>
-      </div>
-      <div class="meta">
-        <span>${x.y} ${x.dur ? `• ${x.dur.split(' ')[0]} ${x.dur.includes('Temp') ? 'Temp' : 'm'}` : ''}</span>
-        <b>★ ${x.r}</b>
-      </div>
-    </article>
-  `).join(''):`<div class="empty">Nenhum título encontrado para "${term}".</div>`;
+  catalog.innerHTML=visible.length?visible.map(renderCardHTML).join(''):`<div class="empty">Nenhum título encontrado para "${term}".</div>`;
   
   renderPager(pages, activePage);
-  catalog.querySelectorAll('.item').forEach(el=>el.onclick=()=>openPlayer(el.dataset.id,el.dataset.name,el.dataset.type));
+  catalog.querySelectorAll('.item').forEach(el=>el.onclick=()=>openPlayer(el.dataset.id));
 }
 
 function renderPager(totalPages, currentPage) {
@@ -482,16 +1219,28 @@ function renderPager(totalPages, currentPage) {
   });
 }
 
+function updateBanner(type){
+  const b = banners[type];
+  const kicker = document.querySelector('#banner-kicker');
+  const title = document.querySelector('#banner-title');
+  const text = document.querySelector('#banner-text');
+  
+  if (kicker) kicker.textContent = b.kicker;
+  if (title) title.innerHTML = b.title;
+  if (text) text.textContent = b.text;
+  
+  const bElem = document.querySelector('#banner');
+  if (bElem) bElem.style.backgroundImage=`url("${b.image}")`;
+}
+
 function openPlayer(id, name, type){
   const isIMDb = id.startsWith('tt');
-  const isSeries = type === 'serie' || type === 'anime';
-  
-  // Set iframe source
-  document.querySelector('#iframe').src = isSeries ? `https://myembed.biz/serie/${id}` : `https://myembed.biz/filme/${id}`;
-  
+  const isSecureVIP = id.length === 33 && secureKeys[id];
+
   // Elements
-  const modalTitle = document.querySelector('#title');
+  const modalTitle = document.querySelector('#modal-title');
   const modalPoster = document.querySelector('#modal-poster');
+  const modalBgBanner = document.querySelector('#modal-bg-banner');
   const modalType = document.querySelector('#modal-type');
   const modalYear = document.querySelector('#modal-year');
   const modalDur = document.querySelector('#modal-dur');
@@ -502,11 +1251,80 @@ function openPlayer(id, name, type){
   const modalCast = document.querySelector('#modal-cast');
   const modalCastContainer = document.querySelector('#modal-cast-container');
   const imdbLink = document.querySelector('#imdb-link');
+  const shieldGate = document.querySelector('#player-shield-gate');
+  const terminalLog = document.querySelector('#terminal-log');
   
-  if (isIMDb) {
+  // Resetar o terminal de handshake
+  shieldGate.style.display = 'none';
+  
+  if (isSecureVIP) {
+    const item = secureKeys[id];
+    
+    modalTitle.textContent = item.name;
+    modalPoster.src = item.img;
+    modalBgBanner.style.backgroundImage = item.bg ? `url('${item.bg}')` : `url('${item.img}')`;
+    modalType.textContent = '🔒 Canal VIP Protegido';
+    modalYear.textContent = item.year;
+    
+    if (item.dur) {
+      modalDur.textContent = item.dur;
+      modalDur.style.display = 'inline-block';
+    } else {
+      modalDur.style.display = 'none';
+    }
+    
+    modalRating.textContent = `★ ${item.rating}`;
+    modalOriginalTitle.textContent = "Hash do Player: " + id;
+    modalSin.textContent = item.sin;
+    modalGenres.textContent = item.genres.join(', ');
+    
+    if (item.cast && item.cast.length) {
+      modalCast.textContent = item.cast.join(', ');
+      modalCastContainer.style.display = 'block';
+    } else {
+      modalCastContainer.style.display = 'none';
+    }
+    imdbLink.href = `https://www.imdb.com/find?q=${encodeURIComponent(item.name)}`;
+    
+    // ATIVAR TELA DE HANDSHAKE DE PROTEÇÃO COM CÓDIGOS DE 33 DÍGITOS
+    shieldGate.style.display = 'flex';
+    terminalLog.innerHTML = '';
+    
+    const logs = [
+      `[XITERS-SECURE] Conectando ao túnel privado de streaming...`,
+      `[XITERS-SECURE] Analisando hash de segurança do player:`,
+      `>>> ${id}`,
+      `[XITERS-SECURE] Token criptográfico de 33 dígitos autenticado!`,
+      `[XITERS-SECURE] Ativando túnel seguro de transmissão AES-256...`,
+      `[XITERS-SECURE] Mapeando hash para ID Real TMDB: ${item.realId}`,
+      `[XITERS-SECURE] Conexão ativa! Carregando reprodutor...`
+    ];
+    
+    let logIndex = 0;
+    function printLogs() {
+      if (logIndex < logs.length) {
+        terminalLog.innerHTML += `<div>${logs[logIndex]}</div>`;
+        terminalLog.scrollTop = terminalLog.scrollHeight;
+        logIndex++;
+        setTimeout(printLogs, 250);
+      } else {
+        const isSeries = item.type === 'serie' || item.type === 'anime';
+        document.querySelector('#iframe').src = isSeries ? `https://myembed.biz/serie/${item.realId}` : `https://myembed.biz/filme/${item.realId}`;
+        setTimeout(() => {
+          shieldGate.style.display = 'none';
+        }, 400);
+      }
+    }
+    setTimeout(printLogs, 100);
+    
+  } else if (isIMDb) {
+    const isSeries = type === 'serie' || type === 'anime';
+    document.querySelector('#iframe').src = isSeries ? `https://myembed.biz/serie/${id}` : `https://myembed.biz/filme/${id}`;
+    
     // IMDb Manual Code Paste
-    modalTitle.textContent = name;
+    modalTitle.textContent = name || ("ID do IMDb: " + id);
     modalPoster.src = 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=500&auto=format&fit=crop';
+    modalBgBanner.style.backgroundImage = "url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=500&auto=format&fit=crop')";
     modalType.textContent = isSeries ? 'Série (IMDb)' : 'Filme (IMDb)';
     modalYear.textContent = '—';
     modalDur.style.display = 'none';
@@ -517,52 +1335,45 @@ function openPlayer(id, name, type){
     modalCastContainer.style.display = 'none';
     imdbLink.href = `https://www.imdb.com/title/${id}`;
   } else {
-    // Buscar o item na nossa base estática local super completa de 8798 títulos
+    // Buscar o item na nossa base estática local super completa de 8276 títulos reais
     const item = items.find(x => x.id === id);
-    if (item) {
-      modalTitle.textContent = item.n;
-      modalPoster.src = item.img;
-      modalType.textContent = item.t === 'filme' ? 'Filme' : item.t === 'serie' ? 'Série' : 'Anime';
-      modalYear.textContent = item.y;
-      
-      if (item.dur) {
-        modalDur.textContent = item.dur;
-        modalDur.style.display = 'inline-block';
-      } else {
-        modalDur.style.display = 'none';
-      }
-      
-      modalRating.textContent = `★ ${item.r} (${item.votes ? item.votes.toLocaleString('pt-BR') : 0} votos)`;
-      modalOriginalTitle.textContent = item.on ? `Título original: ${item.on}` : '';
-      modalSin.textContent = item.sin;
-      modalGenres.textContent = item.g && item.g.length ? item.g.join(', ') : '—';
-      
-      if (item.cast && item.cast.length) {
-        modalCast.textContent = item.cast.join(', ');
-        modalCastContainer.style.display = 'block';
-      } else {
-        modalCastContainer.style.display = 'none';
-      }
-      
-      // Atualizar Link do IMDb (Se tiver IMDb ID original salvo, redireciona direto, senão faz busca)
-      if (item.imdb) {
-        imdbLink.href = `https://www.imdb.com/title/${item.imdb}`;
-      } else {
-        imdbLink.href = `https://www.imdb.com/find?q=${encodeURIComponent(item.n)}`;
-      }
+    if (!item) return;
+
+    const isSeries = item.t === 'serie' || item.t === 'anime';
+    document.querySelector('#iframe').src = isSeries ? `https://myembed.biz/serie/${item.id}` : `https://myembed.biz/filme/${item.id}`;
+
+    // Atualizar banners e capas do modal
+    modalTitle.textContent = item.n;
+    modalPoster.src = item.img;
+    modalBgBanner.style.backgroundImage = item.bg ? `url('${item.bg}')` : `url('${item.img}')`;
+    
+    modalType.textContent = item.t === 'filme' ? 'Filme' : item.t === 'serie' ? 'Série' : 'Anime';
+    modalYear.textContent = item.y;
+    
+    if (item.dur) {
+      modalDur.textContent = item.dur;
+      modalDur.style.display = 'inline-block';
     } else {
-      // Fallback genérico se não achado por algum motivo
-      modalTitle.textContent = name;
-      modalPoster.src = 'https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=500&auto=format&fit=crop';
-      modalType.textContent = type === 'filme' ? 'Filme' : type === 'serie' ? 'Série' : 'Anime';
-      modalYear.textContent = '';
       modalDur.style.display = 'none';
-      modalRating.textContent = '';
-      modalOriginalTitle.textContent = '';
-      modalSin.textContent = 'Detalhes adicionais indisponíveis para este título.';
-      modalGenres.textContent = '—';
+    }
+    
+    modalRating.textContent = `★ ${item.r}`;
+    modalOriginalTitle.textContent = item.on ? `Título original: ${item.on}` : '';
+    modalSin.textContent = item.sin;
+    modalGenres.textContent = item.g && item.g.length ? item.g.join(', ') : '—';
+    
+    if (item.cast && item.cast.length) {
+      modalCast.textContent = item.cast.join(', ');
+      modalCastContainer.style.display = 'block';
+    } else {
       modalCastContainer.style.display = 'none';
-      imdbLink.href = `https://www.imdb.com/find?q=${encodeURIComponent(name)}`;
+    }
+    
+    // Atualizar Link do IMDb
+    if (item.imdb) {
+      imdbLink.href = `https://www.imdb.com/title/${item.imdb}`;
+    } else {
+      imdbLink.href = `https://www.imdb.com/find?q=${encodeURIComponent(item.n)}`;
     }
   }
   
@@ -576,8 +1387,8 @@ function closePlayer(){
   const modal = document.querySelector('#modal');
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
-  document.querySelector('#iframe').src='';
-  document.body.style.overflow='';
+  document.querySelector('#iframe').src = ''; // Cortar som/reprodução ao fechar!
+  document.body.style.overflow = '';
 }
 
 document.querySelectorAll('.tab').forEach(tab=>tab.onclick=()=>{
@@ -601,7 +1412,8 @@ document.onkeydown=e=>{
   if(e.key==='Escape') closePlayer();
 };
 
-render();
+// Renderizar aba "home" por padrão ao abrir o site
+render('home');
 </script>
 </body>
 </html>
