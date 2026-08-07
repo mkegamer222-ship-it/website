@@ -17,7 +17,7 @@
 ========================================================================
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800;900&display=swap');
 
 :root {
   --bg: #030305; /* Preto Puro de Fundo */
@@ -92,9 +92,9 @@ body::after {
   background: var(--accent);
 }
 
-/* Header Glassmorphism Flutuante Superior (Altura Sleek Reduzida) */
+/* Header Glassmorphism Flutuante Superior (Altura Sleek Reduzida para evitar vácuos) */
 header {
-  height: 70px;
+  height: 64px;
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
@@ -150,7 +150,7 @@ header {
   align-items: center;
   gap: 12px;
   width: min(500px, 46vw);
-  height: 40px;
+  height: 38px;
   padding: 0 16px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -178,7 +178,7 @@ header {
   border: 0;
   background: transparent;
   color: #fff;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -193,27 +193,27 @@ header {
 
 /* Intro Título Grande e Impactante (Mais compacto para evitar espaços vazios) */
 .intro {
-  padding: 30px 0 15px;
+  padding: 20px 0 10px;
   display: flex;
   align-items: end;
   justify-content: space-between;
-  gap: 30px;
+  gap: 25px;
 }
 
 .intro small {
   color: var(--accent);
-  font-size: 10.5px;
+  font-size: 10px;
   letter-spacing: 4px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .intro h1 {
-  font-size: clamp(28px, 5vw, 52px);
+  font-size: clamp(26px, 4.5vw, 46px);
   line-height: 0.95;
   letter-spacing: -2.5px;
-  margin: 10px 0 0;
-  max-width: 650px;
+  margin: 8px 0 0;
+  max-width: 600px;
   font-weight: 950;
   text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
@@ -229,18 +229,18 @@ header {
   line-height: 1.5;
   max-width: 360px;
   margin: 0;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 /* Widescreen Hero Banner Slideshow (Cinema-Teatral Proporcional 21:9 Compacto) */
 .banner {
-  height: clamp(220px, 28vw, 380px); /* Totalmente fluido e mais compacto! */
+  height: clamp(200px, 25vw, 340px); /* Ajustado para ser mais compacto e estético */
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   background: #000;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
 }
@@ -279,9 +279,9 @@ header {
 .slide-content {
   position: absolute;
   z-index: 2;
-  left: 50px;
-  right: 50px;
-  max-width: 600px;
+  left: 40px;
+  right: 40px;
+  max-width: 550px;
 }
 
 .slide-content small {
@@ -298,9 +298,9 @@ header {
 }
 
 .slide-content h2 {
-  font-size: clamp(24px, 3.8vw, 40px);
+  font-size: clamp(22px, 3.5vw, 36px);
   line-height: 1.05;
-  margin: 14px 0 10px;
+  margin: 10px 0 8px;
   font-weight: 950;
   letter-spacing: -1.5px;
   text-shadow: 0 4px 15px rgba(0,0,0,0.8);
@@ -311,9 +311,9 @@ header {
 
 .slide-content p {
   color: #d1d5db;
-  margin: 0 0 20px 0;
-  font-size: 13.5px;
-  line-height: 1.5;
+  margin: 0 0 16px 0;
+  font-size: 13px;
+  line-height: 1.4;
   text-shadow: 0 2px 8px rgba(0,0,0,0.7);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -325,10 +325,10 @@ header {
   background: var(--accent-gradient);
   color: #fff;
   border: 0;
-  padding: 11px 26px;
+  padding: 10px 24px;
   border-radius: 99px;
   font-weight: 900;
-  font-size: 13px;
+  font-size: 12.5px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -345,14 +345,14 @@ header {
 .carousel-indicators {
   position: absolute;
   z-index: 2;
-  bottom: 25px;
-  right: 50px;
+  bottom: 20px;
+  right: 40px;
   display: flex;
   gap: 8px;
 }
 
 .indicator {
-  width: 20px;
+  width: 18px;
   height: 4px;
   border-radius: 99px;
   background: rgba(255, 255, 255, 0.15);
@@ -364,7 +364,7 @@ header {
 
 .indicator.active {
   background: var(--accent-gradient);
-  width: 38px;
+  width: 32px;
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
@@ -372,7 +372,7 @@ header {
 .tabs {
   display: flex;
   gap: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
@@ -381,7 +381,7 @@ header {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.015);
   color: var(--muted);
-  padding: 11px 24px;
+  padding: 10px 22px;
   border-radius: 99px;
   font-weight: 800;
   font-size: 13px;
@@ -405,7 +405,7 @@ header {
 
 /* Prateleiras de Rolagem Horizontal (Row Containers - Netflix Style) */
 .row-container {
-  margin-bottom: 35px;
+  margin-bottom: 25px; /* Reduzido para evitar vácuos */
   position: relative;
 }
 
@@ -423,9 +423,9 @@ header {
 }
 
 .row-title {
-  font-size: 20px;
+  font-size: 18px; /* Ajustado */
   font-weight: 950;
-  margin: 0 0 14px 0;
+  margin: 0 0 12px 0;
   border-left: 4px solid var(--accent);
   padding-left: 12px;
   letter-spacing: -0.5px;
@@ -435,7 +435,7 @@ header {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding: 8px 2px 20px 2px;
+  padding: 4px 2px 14px 2px;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
 }
@@ -445,11 +445,12 @@ header {
 }
 
 .row-scroller .item {
-  flex: 0 0 180px; /* Largura reduzida para ficar muito mais compacto e uniforme com o grid! */
+  flex: 0 0 180px; /* Largura rígida e padronizada para os cards da prateleira */
+  min-width: 180px; /* CORREÇÃO FUNDAMENTAL: Impede o Flexbox de esticar o card por causa de textos longos! */
 }
 
 .row-scroller .poster {
-  height: auto; /* Deixa o aspect-ratio controlar de forma limpa */
+  height: auto;
 }
 
 /* Layout Dashboard da Categoria com Sidebar de Filtro Lateral/Bento Style com Transparência */
@@ -537,7 +538,7 @@ header {
   border-color: var(--white);
 }
 
-/* Grid de Posters Geral (Compacto e Uniformizado de 4 colunas para não ficar gigante) */
+/* Grid de Posters Geral (Compacto, Simétrico e Uniformizado) */
 .grid-section {
   display: none; /* Oculto por padrão, ativado em buscas ou ao clicar em abas dedicadas */
 }
@@ -553,7 +554,7 @@ header {
 
 .section-top h2 {
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 950;
   letter-spacing: -0.5px;
 }
@@ -564,33 +565,35 @@ header {
   font-weight: 700;
 }
 
-/* Grid perfeitamente simétrica de 4 colunas ao lado da sidebar */
+/* Grid perfeitamente simétrica de 4 colunas ao lado da sidebar usando minmax para impedir distorção */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 16px; /* Mais compacto para evitar espaços vazios */
-  padding-bottom: 50px;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); 
+  gap: 16px; /* Mais compacto para evitar vácuos */
+  padding-bottom: 40px;
 }
 
-/* Grid expandida para largura total na busca sem sidebar de filtros (5 colunas) */
+/* Grid expandida para largura total na busca sem sidebar de filtros (5 colunas simétricas) */
 .category-dashboard.search-active .sidebar-filter {
   display: none;
 }
 
 .category-dashboard.search-active .grid {
-  grid-template-columns: repeat(5, 1fr); /* 5 colunas para preencher com sofisticação */
+  grid-template-columns: repeat(5, minmax(0, 1fr)); 
 }
 
 .item {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* PROTEÇÃO CONTRA EXPANSÃO POR NOWRAP */
+  width: 100%;
 }
 
 /* Poster com Efeito de Hover Zoom Premium, Shine Sweep e Proporção Perfeita de Cinema 2:3 */
 .poster {
   width: 100%;
-  aspect-ratio: 2/3; /* Proporção padrão cinematográfica UNIFORME em todos os locais! */
+  aspect-ratio: 2/3; /* Proporção padrão cinematográfica ABSOLUTAMENTE IDÊNTICA EM TODOS OS CARDS! */
   border-radius: 16px;
   border: 1px solid var(--line);
   overflow: hidden;
@@ -671,12 +674,12 @@ header {
 /* Título e Meta do Cartão Fora do Poster para Posicionamento Impecável */
 .item-title {
   margin: 10px 0 4px 0;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 800;
   color: #fff;
-  white-space: nowrap;
+  white-space: nowrap; /* FORÇA UMA ÚNICA LINHA REAL */
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /* ADICIONA AS RETICÊNCIAS COESAS SEMPRE NO MESMO TAMANHO */
   line-height: 1.3;
   transition: color 0.2s ease;
 }
@@ -912,11 +915,11 @@ footer a:hover {
 /* Responsividade de Estilo Superior (Compactação Extrema de Espaços e Tamanhos) */
 @media(max-width:1024px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 colunas simétricas em tablets */
     gap: 16px;
   }
   .category-dashboard.search-active .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -947,8 +950,8 @@ footer a:hover {
     min-width: 120px;
   }
 
-  .grid { grid-template-columns: repeat(3, 1fr); gap: 12px; } /* 3 colunas para celulares normais */
-  .category-dashboard.search-active .grid { grid-template-columns: repeat(3, 1fr); }
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; } /* 3 colunas simétricas no mobile */
+  .category-dashboard.search-active .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   
   .banner { height: 220px; border-radius: 20px; margin-bottom: 25px; }
   .slide-content { left: 24px; right: 24px; }
@@ -966,7 +969,7 @@ footer a:hover {
   .dialog-info { padding: 18px; overflow-y: auto; }
   .close { top: 12px; right: 12px; width: 34px; height: 34px; font-size: 22px; }
   
-  .row-scroller .item { flex: 0 0 130px; } /* Muito mais compacto no celular */
+  .row-scroller .item { flex: 0 0 130px; min-width: 130px; } /* Muito mais compacto no celular */
   .row-container::after { display: none; } /* Ocultar sombra no mobile para melhor renderização */
 }
 
@@ -984,8 +987,8 @@ footer a:hover {
   .slide-btn { padding: 6px 14px; font-size: 10px; }
   .carousel-indicators { bottom: 8px; right: 14px; }
   
-  .grid { grid-template-columns: 1fr 1fr; gap: 10px; } /* 2 colunas para celulares muito pequenos (menor que 480px) */
-  .category-dashboard.search-active .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } /* 2 colunas para celulares muito pequenos (menor que 480px) */
+  .category-dashboard.search-active .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .intro h1 { letter-spacing: -1.5px; }
   footer { display: block; line-height: 2.0; padding: 16px 6%; }
 }
@@ -1110,7 +1113,7 @@ footer a:hover {
 <div class="modal" id="modal" aria-hidden="true">
   <div class="shade" data-close></div>
   <div class="dialog">
-    <!-- Neblina Cósmica do Modal (HBO Max / Max style) baseada na imagem ativa -->
+    <!-- Neblina Cósmica do Modal (HBO Max / Max style) baseada na imagem activa -->
     <div id="modal-bg-banner" style="position: absolute; inset: 0; background-size: cover; background-position: center 20%; opacity: 0.12; filter: blur(40px); pointer-events: none; z-index: 0;"></div>
     
     <button class="close" data-close aria-label="Fechar modal">×</button>
@@ -1293,7 +1296,7 @@ function buildHomeRows() {
   homeRows.style.display = 'block';
   gridSection.style.display = 'none';
   
-  // 1. Tendências Globais (Mais Assistidos) - Maiores blockbusters (votos > 1500, ordenado por votos decrescente)
+  // 1. Tendências Globais (Mais Assistidos) - Maiores blockbusters (votos > 1000, ordenado por votos decrescente)
   const trendingAll = items
     .filter(x => x.votes && x.votes > 1000)
     .sort((a, b) => b.votes - a.votes)
@@ -1761,5 +1764,5 @@ document.onkeydown=e=>{
 // Renderizar aba "home" por padrão ao abrir o site
 render('home');
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a273d9f4bea4346c',t:'MTc4NjA4MDIyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
